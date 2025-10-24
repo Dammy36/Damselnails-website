@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/184/original/damselnail-1.jpg?1761323107);
+  background-position: 30%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 1rem;
+  height: 100vh;
+  font-family: "Playfair Display", serif;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  color: #f50581;
+}
+
+.menu {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
