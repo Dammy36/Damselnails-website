@@ -30,9 +30,22 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/origina
             alt="Damsel-logo"
           />
         </div>
-        <div class="">
-          <button id="hamburger" class="text-white text-2xl focus:outline-none">
-            ☰
+
+        <div class="md:hidden">
+          <button id="menu-btn" class="focus:outline-none">
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
           </button>
         </div>
 
@@ -84,33 +97,33 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/origina
 
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-transparent px-4 pt-2 pb-4 space-y-2 shadow-md flex flex-col items-end space-y-6 text-white cursor-pointer"
+        class="hidden absolute top-16 left-0 w-full bg-white text-black mt-10 flex flex-col items-center space-y-4 py-6 z-50"
       >
-        <a href="#home" class="block hover:text-pink-400 transition underline"
+        <a href="#home" class="block hover:text-pink-200 transition underline"
           >Home</a
         >
-        <a href="#about" class="block hover:text-pink-400 transition underline"
+        <a href="#about" class="block hover:text-pink-200 transition underline"
           >About</a
         >
         <a
           href="#services"
-          class="block hover:text-pink-400 transition underline"
+          class="block hover:text-pink-200 transition underline"
           >Services</a
         >
         <a
           href="#gallery"
-          class="block hover:text-pink-400 transition underline"
+          class="block hover:text-pink-200 transition underline"
           >Gallery</a
         >
         <a
           href="#contact"
-          class="block hover:text-pink-400 transition underline"
+          class="block hover:text-pink-200 transition underline"
           >Contact</a
         >
         <a
           href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%20want%20to%20book%20an%20appointment."
           target="_blank"
-          class="bg-green-500 text-white px-2 py-2 rounded-md hover:bg-green-600 transition"
+          class="text-green-400 hover:text-pink-500 transition"
         >
           WhatsApp
         </a>
@@ -125,7 +138,7 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/origina
       </div>
 
       <section
-        class="absolute md:mt-32 inset-y-0 md:text-left flex flex-col justify-center px-8 md:px-16 text-white md:max-w-3xl md:items-start text-center"
+        class="absolute md:mt-32 inset-y-0 md:text-left flex flex-col justify-center px-1 md:px-16 text-white md:max-w-3xl md:items-start text-center"
       >
         <div class="">
           <h2 class="ext-lg md:text-xl">24 Akwonjo Road Egbeda Lagos</h2>

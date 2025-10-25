@@ -1,4 +1,4 @@
-const hamburger = document.getElementById("hamburger");
+const hamburger = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
 hamburger.addEventListener("click", () => {
