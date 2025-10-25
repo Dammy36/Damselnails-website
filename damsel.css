@@ -8,12 +8,14 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/184/original/damselnail-1.jpg?1761323107);
   background-position: 30%;
-
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 1rem;
   height: 100vh;
   font-family: "Playfair Display", serif;
+
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 a {
