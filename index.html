@@ -18,418 +18,326 @@
     <title>Damsel Nails</title>
   </head>
   <body>
-    <header class="reletive h-screen px-8">
-      <nav class="px-3 py-4 flex items-center justify-between relative z-50">
-        <div class="w-10 md:w-14 lg:w-20">
-          <img
-            class="h-19 md:h-12 w-auto rounded-full"
-            src="
+    <div>
+      <header class="relative h-screen px-8">
+        <nav class="px-3 py-4 flex items-center justify-between relative z-50">
+          <div class="w-10 md:w-14 lg:w-20">
+            <img
+              class="h-19 md:h-12 w-auto rounded-full"
+              src="
 https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/original/Pink_Black_Beige_Minimalist_Modern_Personal_Brand_Nail_Salon_Logo_%281%29.png?1761320107"
-            alt="Damsel-logo"
-          />
-        </div>
+              alt="Damsel-logo"
+            />
+          </div>
 
-        <div class="md:hidden">
-          <button id="menu-btn" class="focus:outline-none">
-            <svg
-              class="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
+          <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
 
-        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <li>
-            <a href="#home" class="text-white hover:text-pink-400 transition"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a href="#about" class="text-white hover:text-pink-400 transition"
-              >About</a
-            >
-          </li>
-          <li>
+          <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+            <li>
+              <a href="#home" class="text-white hover:text-pink-400 transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="text-white hover:text-pink-400 transition"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="text-white hover:text-pink-400 transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#gallery"
+                class="text-white hover:text-pink-400 transition"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-white hover:text-pink-400 transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <div class="hidden md:flex space-x-3">
             <a
-              href="#services"
-              class="text-white hover:text-pink-400 transition"
-              >Services</a
+              href="https://wa.me/1234567890?text=Hi%20Damsel%20Nails!"
+              target="_blank"
+              class="bg-pink-400 text-white px-4 py-2 rounded-md hover:bg-pink-500 transition"
+              >WhatsApp</a
             >
-          </li>
-          <li>
-            <a href="#gallery" class="text-white hover:text-pink-400 transition"
-              >Gallery</a
+            <a
+              href="https://www.instagram.com/yourusername/"
+              target="_blank"
+              class="bg-pink-100 text-pink-400 px-4 py-2 rounded-md hover:bg-pink-200 transition"
+              >Instagram</a
             >
-          </li>
-          <li>
-            <a href="#contact" class="text-white hover:text-pink-400 transition"
-              >Contact</a
-            >
-          </li>
-        </ul>
+          </div>
+        </nav>
 
-        <div class="hidden md:flex space-x-3">
-          <a
-            href="https://wa.me/1234567890?text=Hi%20Damsel%20Nails!"
-            target="_blank"
-            class="bg-pink-400 text-white px-4 py-2 rounded-md hover:bg-pink-500 transition"
-            >WhatsApp</a
+        <div
+          id="mobile-menu"
+          class="hidden absolute top-16 left-0 w-full bg-white text-black mt-10 flex flex-col items-center space-y-4 py-6 z-50"
+        >
+          <a href="#home" class="block hover:text-pink-200 transition underline"
+            >Home</a
           >
           <a
-            href="https://www.instagram.com/yourusername/"
-            target="_blank"
-            class="bg-pink-100 text-pink-400 px-4 py-2 rounded-md hover:bg-pink-200 transition"
-            >Instagram</a
+            href="#about"
+            class="block hover:text-pink-200 transition underline"
+            >About</a
           >
-        </div>
-      </nav>
-
-      <div
-        id="mobile-menu"
-        class="hidden absolute top-16 left-0 w-full bg-white text-black mt-10 flex flex-col items-center space-y-4 py-6 z-50"
-      >
-        <a href="#home" class="block hover:text-pink-200 transition underline"
-          >Home</a
-        >
-        <a href="#about" class="block hover:text-pink-200 transition underline"
-          >About</a
-        >
-        <a
-          href="#services"
-          class="block hover:text-pink-200 transition underline"
-          >Services</a
-        >
-        <a
-          href="#gallery"
-          class="block hover:text-pink-200 transition underline"
-          >Gallery</a
-        >
-        <a
-          href="#contact"
-          class="block hover:text-pink-200 transition underline"
-          >Contact</a
-        >
-        <a
-          href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%20want%20to%20book%20an%20appointment."
-          target="_blank"
-          class="text-green-400 hover:text-pink-500 transition"
-        >
-          WhatsApp
-        </a>
-
-        <a
-          href="https://www.instagram.com/damsellnails/"
-          target="_blank"
-          class="text-pink-400 hover:text-pink-500 transition"
-        >
-          Instagram
-        </a>
-      </div>
-
-      <section
-        class="absolute md:mt-32 inset-y-0 md:text-left flex flex-col justify-center px-1 md:px-16 text-white md:max-w-3xl md:items-start text-center"
-      >
-        <div class="">
-          <h2 class="ext-lg md:text-xl">24 Akwonjo Road Egbeda Lagos</h2>
-
-          <h1 class="md:text-6xl text-3xl font-bold mt-6">
-            Damsel Nails Studio
-          </h1>
-
-          <p class="mt-10 ext-lg md:text-xl font-poppins">
-            Damsel Nails Studio is your go-to destination for stunning nail art,
-            manicures, pedicures, and premium nail care. We combine creativity,
-            style, and professionalism to make every client’s nails beautiful
-            and unique.
-          </p>
-        </div>
-        <div class="mt-14">
           <a
-            href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!"
-            target="_blank"
-            class="mt-6 bg-pink-400 text-white px-6 py-3 rounded-md hover:bg-pink-500 transition w-max"
+            href="#services"
+            class="block hover:text-pink-200 transition underline"
+            >Services</a
           >
-            Book Now
+          <a
+            href="#gallery"
+            class="block hover:text-pink-200 transition underline"
+            >Gallery</a
+          >
+          <a
+            href="#contact"
+            class="block hover:text-pink-200 transition underline"
+            >Contact</a
+          >
+          <a
+            href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%20want%20to%20book%20an%20appointment."
+            target="_blank"
+            class="text-green-400 hover:text-pink-500 transition"
+          >
+            WhatsApp
+          </a>
+
+          <a
+            href="https://www.instagram.com/damsellnails/"
+            target="_blank"
+            class="text-pink-400 hover:text-pink-500 transition"
+          >
+            Instagram
           </a>
         </div>
-      </section>
-    </header>
 
-    <main>
-      <section class="md:py-16 md:px-10 md:mt-10">
-        <div
-          class="container grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        <section
+          class="absolute md:mt-32 inset-y-0 md:text-left flex flex-col justify-center px-1 md:px-16 text-white md:max-w-3xl md:items-start text-center"
         >
+          <div class="">
+            <h2 class="ext-lg md:text-xl">24 Akwonjo Road Egbeda Lagos</h2>
+
+            <h1 class="md:text-6xl text-3xl font-bold mt-6">
+              Damsel Nails Studio
+            </h1>
+
+            <p class="mt-10 ext-lg md:text-xl font-poppins">
+              Damsel Nails Studio is your go-to destination for stunning nail
+              art, manicures, pedicures, and premium nail care. We combine
+              creativity, style, and professionalism to make every client’s
+              nails beautiful and unique.
+            </p>
+          </div>
+          <div class="mt-14">
+            <a
+              href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!"
+              target="_blank"
+              class="mt-6 bg-pink-400 text-white px-6 py-3 rounded-md hover:bg-pink-500 transition w-max"
+            >
+              Book Now
+            </a>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="md:py-16 md:px-10 md:mt-10 sm:px-5 sm:mt-16">
           <div
-            class="flex gap-2 overflow-x-auto sm:overflow-visible snap-x sm:snap-none"
+            class="container grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
           >
-            <img
-              src="
+            <div
+              class="flex gap-2 overflow-x-auto sm:overflow-visible snap-x sm:snap-none"
+            >
+              <img
+                src="
 https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/618/original/nail4.jpg?1759874332"
-              alt="Nail art 1"
-              class="w-1/4 h-96 object-cover rounded-lg transform -translate-y-10"
-            />
+                alt="Nail art 1"
+                class="w-1/4 h-96 object-cover rounded-lg transform -translate-y-10"
+              />
 
-            <img
-              src="
+              <img
+                src="
 https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/619/original/nails5.jpg?1759874345"
-              alt="Nail art 2"
-              class="w-1/4 h-96 object-cover rounded-lg transform -translate-y-4"
-            />
+                alt="Nail art 2"
+                class="w-1/4 h-96 object-cover rounded-lg transform -translate-y-4"
+              />
 
-            <img
-              src="
+              <img
+                src="
 
 https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/620/original/nails6.jpg?1759874361"
-              alt="Nail art 3"
-              class="w-1/4 h-96 object-cover rounded-lg transform -translate-y-10"
-            />
+                alt="Nail art 3"
+                class="w-1/4 h-96 object-cover rounded-lg transform -translate-y-10"
+              />
 
-            <img
-              src="
+              <img
+                src="
 https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/621/original/nails7.jpg?1759874374"
-              alt="Nail art 4"
-              class="w-1/4 h-96 object-cover rounded-lg transform -translate-y-4"
-            />
-          </div>
+                alt="Nail art 4"
+                class="w-1/4 h-96 object-cover rounded-lg transform -translate-y-4"
+              />
+            </div>
 
-          <!-- RIGHT: content column -->
-          <div class="flex flex-col px-10 md:mb-20">
-            <h2 class="text-2xl md:text-4xl font-script font-bold mb-4">
-              Our Signature Looks
-            </h2>
-            <p class="text-gray-700 mb-6 max-w-xl">
-              At DamselNails Studio, our signature looks embody elegance,
-              creativity, and confidence. Each set is crafted to highlight your
-              personal style — from soft, natural tones that whisper
-              sophistication to bold, eye-catching designs that command
-              attention.
-            </p>
-            <p class="text-gray-700 mb-6 max-w-xl">
-              We blend precision artistry with premium-quality products to
-              create nails that not only look stunning but also last
-              beautifully. Whether it’s our timeless “Luxury Nude Set”, the
-              classy “French Reinvented”, or the vibrant “Glam Chrome
-              Collection”, every look is designed to make you feel effortlessly
-              polished, powerful, and unforgettable.
-            </p>
-            <div class="flex gap-4">
-              <a
-                href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!"
-                target="_blank"
-                class="inline-block bg-pink-400 text-white px-4 py-2 text-sm sm:px-5 sm:text-base rounded-md shadow hover:bg-pink-500 transition"
-              >
-                Book on WhatsApp
-              </a>
-              <a
-                href="https://www.instagram.com/damsellnails/"
-                target="_blank"
-                class="inline-block bg-white text-pink-500 px-4 py-2 text-sm sm:px-4 sm:text-base rounded-md shadow hover:opacity-95 transition"
-              >
-                Instagram
-              </a>
+            <!-- RIGHT: content column -->
+            <div class="flex flex-col px-10 md:mb-20">
+              <h2 class="text-2xl md:text-4xl font-script font-bold mb-4">
+                Our Signature Looks
+              </h2>
+              <p class="text-gray-700 mb-6 max-w-xl">
+                At DamselNails Studio, our signature looks embody elegance,
+                creativity, and confidence. Each set is crafted to highlight
+                your personal style — from soft, natural tones that whisper
+                sophistication to bold, eye-catching designs that command
+                attention.
+              </p>
+              <p class="text-gray-700 mb-6 max-w-xl">
+                We blend precision artistry with premium-quality products to
+                create nails that not only look stunning but also last
+                beautifully. Whether it’s our timeless “Luxury Nude Set”, the
+                classy “French Reinvented”, or the vibrant “Glam Chrome
+                Collection”, every look is designed to make you feel
+                effortlessly polished, powerful, and unforgettable.
+              </p>
+              <div class="flex gap-4">
+                <a
+                  href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!"
+                  target="_blank"
+                  class="inline-block bg-pink-400 text-white px-4 py-2 text-sm sm:px-5 sm:text-base rounded-md shadow hover:bg-pink-500 transition"
+                >
+                  Book on WhatsApp
+                </a>
+                <a
+                  href="https://www.instagram.com/damsellnails/"
+                  target="_blank"
+                  class="inline-block bg-white text-pink-500 px-4 py-2 text-sm sm:px-4 sm:text-base rounded-md shadow hover:opacity-95 transition"
+                >
+                  Instagram
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Services Section -->
-      <section id="services" class="py-16 bg-white">
-        <div class="container mx-auto px-4 md:px-8">
-          <h2
-            class="text-3xl md:text-4xl font-script font-bold text-pink-600 mb-8 text-center"
-          >
-            Our Services
-          </h2>
+        </section>
 
-          <!-- Cards grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-white">
+          <div class="container mx-auto px-4 md:px-8">
+            <h2
+              class="text-3xl md:text-4xl font-script font-bold text-pink-600 mb-8 text-center"
+            >
+              Services For Every Occations
+            </h2>
+          </div>
+
+          <div class="gridx3 grid place-items-center">
             <!-- Card 1 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="card">
               <img
-                src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/247/original/manicure.jpg?1761417221"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/247/original/manicure.jpg?1761417221"
                 alt="Classic Manicure"
-                class="w-full h-45 object-cover"
+                class="object-cover rounded-md mx-auto"
               />
-              <div class="p-5">
-                <h3 class="text-lg font-semibold font-poppins mb-2">
-                  Classic Manicure
-                </h3>
-                <p class="text-gray-600 mb-4 text-sm">
-                  A refreshing treatment that shapes, cleans, and polishes your
-                  nails — giving your hands a smooth, elegant finish.
-                </p>
-                <div class="flex items-center gap-3">
-                  <a
-                    href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%20want%20to%20book%20a%20Classic%20Manicure"
-                    target="_blank"
-                    class="inline-block bg-pink-400 text-white px-4 py-2 rounded-md text-sm font-medium"
-                  >
-                    Book
-                  </a>
-                  <span class="text-gray-500 text-sm">From ₦10,500</span>
-                </div>
-              </div>
-            </article>
+              <h2 class="text-center font-semibold mt-3 text-sm">
+                Russian Manicure
+              </h2>
+              <p class="text-center text-xs text-gray-600 mt-3 leading-relaxed">
+                A Russian manicure is a precise nail technique that focuses on
+                cleaning and refining the cuticle area using an electric drill.
+                It creates a neat, clean look and allows polish or gel to sit
+                perfectly under the cuticle, making nails look longer and
+                helping the manicure last longer..
+              </p>
+            </div>
 
             <!-- Card 2 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="card">
               <img
                 src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/248/original/pedicure.jpg?1761417293"
-                alt="Pedicure"
-                class="w-full h-45 object-cover"
+
+
+
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/617/original/nails2.jpg?1759874319"
+                class="object-cover rounded-md mx-auto"
               />
-              <div class="p-5">
-                <h3 class="text-lg font-semibold font-poppins mb-2">
-                  Pedicure Treatment
-                </h3>
-                <p class="text-gray-600 mb-4 text-sm">
-                  Pamper your feet with a soothing soak, exfoliation, nail
-                  shaping, and polish for soft, beautiful toes.
-                </p>
-                <div class="flex items-center gap-3">
-                  <a
-                    href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%20want%20to%20book%20a%20Pedicure"
-                    target="_blank"
-                    class="inline-block bg-pink-400 text-white px-4 py-2 rounded-md text-sm font-medium"
-                  >
-                    Book
-                  </a>
-                  <span class="text-gray-500 text-sm">From ₦12,500</span>
-                </div>
-              </div>
-            </article>
+              <h2 class="text-center font-semibold mt-3 text-sm">
+                Acrylic Nails
+              </h2>
+              <p class="text-center text-xs text-gray-600 mt-3 leading-relaxed">
+                Acrylic nails are created by combining a liquid monomer and
+                powder to form a strong, durable extension on the natural nails.
+                They’re perfect for adding length, strength, and any shape you
+                want. Acrylics are long-lasting and can be styled with colors,
+                designs, or charms to match any look.
+              </p>
+            </div>
 
             <!-- Card 3 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="card">
               <img
                 src="
-
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/249/original/acrylic.jpg?1761417358"
-                alt="Acrylic & Gel Extensions"
-                class="w-full h-45 object-cover"
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/021/original/baib_nails.jpg?1763615525"
+                class="object-cover rounded-md mx-auto"
               />
-              <div class="p-5">
-                <h3 class="text-lg font-semibold font-poppins mb-2">
-                  Acrylic & Gel Extensions
-                </h3>
-                <p class="text-gray-600 mb-4 text-sm">
-                  Durable and stunning extensions, crafted to enhance length and
-                  style with a flawless finish.
-                </p>
-                <div class="flex items-center gap-3">
-                  <a
-                    href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%20want%20Acrylic%20Extensions"
-                    target="_blank"
-                    class="inline-block bg-pink-400 text-white px-4 py-2 rounded-md text-sm font-medium"
-                  >
-                    Book
-                  </a>
-                  <span class="text-gray-500 text-sm">From ₦18,500</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 4 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden">
+              <h2 class="text-center font-semibold mt-3 text-sm">Baib Nails</h2>
+              <p class="text-center text-xs text-gray-600 mt-3 leading-relaxed">
+                BIAB nails use a builder gel applied from a bottle to strengthen
+                and grow the natural nails. It’s perfect for clients who want
+                healthier, stronger nails without extensions. BIAB gives a
+                smooth, natural look, lasts long, and helps prevent breakage
+                while encouraging natural nail growth..
+              </p>
+            </div>
+            <div class="card">
               <img
                 src="
 
 
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/252/original/desing-nails.jpg?1761417998"
-                alt="Nail Art & Design"
-                class="w-full h-45 object-cover"
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/022/original/pedi.jpg?1763615818"
+                class="object-cover rounded-md mx-auto"
               />
-              <div class="p-5">
-                <h3 class="text-lg font-semibold font-poppins mb-2">
-                  Nail Art & Design
-                </h3>
-                <p class="text-gray-600 mb-4 text-sm">
-                  From subtle to statement — creative art, stones, foils, and
-                  custom patterns to match your style.
-                </p>
-                <div class="flex items-center gap-3">
-                  <a
-                    href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%20want%20Nail%20Art"
-                    target="_blank"
-                    class="inline-block bg-pink-400 text-white px-4 py-2 rounded-md text-sm font-medium"
-                  >
-                    Book
-                  </a>
-                  <span class="text-gray-500 text-sm">From ₦28,000</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 5 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden">
-              <img
-                src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/250/original/refill_nails.jpg?1761417415"
-                alt="Gel Polish & Refills"
-                class="w-full h-45 object-cover"
-              />
-              <div class="p-5">
-                <h3 class="text-lg font-semibold font-poppins mb-2">
-                  Gel Polish & Refills
-                </h3>
-                <p class="text-gray-600 mb-4 text-sm">
-                  Long-lasting, glossy polish that resists chipping. Quick
-                  refills keep your nails fresh and flawless.
-                </p>
-                <div class="flex items-center gap-3">
-                  <a
-                    href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%20want%20a%20Gel%20Refill"
-                    target="_blank"
-                    class="inline-block bg-pink-400 text-white px-4 py-2 rounded-md text-sm font-medium"
-                  >
-                    Book
-                  </a>
-                  <span class="text-gray-500 text-sm">From ₦15,500</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 6 -->
-            <article class="bg-white rounded-xl shadow-md overflow-hidden">
-              <img
-                src="
-
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/251/original/lashes.jpg?1761417618"
-                alt="Lashes"
-                class="w-full h-45 object-cover"
-              />
-              <div class="p-5">
-                <h3 class="text-lg font-semibold font-poppins mb-2">
-                  Classic Lashes
-                </h3>
-                <p class="text-gray-600 mb-4 text-sm">Non semi-Lahes</p>
-                <div class="flex items-center gap-3">
-                  <a
-                    href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%20want%20a%20Spa%20Treatment"
-                    target="_blank"
-                    class="inline-block bg-pink-400 text-white px-4 py-2 rounded-md text-sm font-medium"
-                  >
-                    Book
-                  </a>
-                  <span class="text-gray-500 text-sm">From ₦10,500</span>
-                </div>
-              </div>
-            </article>
+              <h2 class="text-center font-semibold mt-3 text-sm">Pedicure</h2>
+              <p class="text-center text-xs text-gray-600 mt-3 leading-relaxed">
+                A pedicure is a foot care treatment that cleans, shapes, and
+                refreshes the toenails and feet. It includes soaking, scrubbing,
+                cuticle care, and nail trimming to keep the feet smooth and
+                healthy. Finished with polish or gel, a pedicure leaves the feet
+                looking neat, soft, and well-groomed.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
 
     <script src="damsel.js"></script>
   </body>
