@@ -37,11 +37,12 @@ h2 {
 }
 
 .card {
-  max-width: 80%;
+  max-width: 90%;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   border-radius: 10px;
   padding: 15px;
+  gap: 20px;
 }
 
 .card img {
