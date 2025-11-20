@@ -50,6 +50,16 @@ h2 {
   height: 50%;
 }
 
+.bg {
+  background-color: #50464d;
+}
+
+/*.section-container {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  z-index: 1;
+}*/
 @media (max-width: 900px) {
   .gridx3 {
     grid-template-columns: 1fr;
