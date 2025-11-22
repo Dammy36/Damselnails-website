@@ -29,10 +29,15 @@ h2 {
   color: #f50581;
 }
 
-.gridx3 {
+.gridx4 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 5px 50px;
+}
 
+.gridx3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 5px 50px;
 }
 
@@ -54,14 +59,9 @@ h2 {
   background-color: #50464d;
 }
 
-/*.section-container {
-  width: 50%;
-  display: block;
-  margin: 0 auto;
-  z-index: 1;
-}*/
 @media (max-width: 900px) {
-  .gridx3 {
+  .gridx3,
+  .gridx4 {
     grid-template-columns: 1fr;
     gap: 15px;
   }
