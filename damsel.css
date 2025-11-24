@@ -59,10 +59,43 @@ h2 {
   background-color: #50464d;
 }
 
+.fa-quote-right {
+  left: 30%;
+  bottom: 0;
+  font-size: 50px;
+}
+
+.black {
+  margin: 0 auto;
+  display: block;
+  width: 100px;
+}
+
+.black img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+footer {
+  background: rgb(15, 22, 41);
+}
+
+footer .fa-brands {
+  font-size: 22px;
+}
+
 @media (max-width: 900px) {
   .gridx3,
   .gridx4 {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 10px;
+  }
+  .black {
+    margin: 0 auto;
+    display: block;
+    width: 100px;
+    margin-top: 20px;
   }
 }
