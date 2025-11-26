@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+body {
+  background: #f1e7ed;
+}
 
 html {
   scroll-behavior: smooth;
@@ -32,6 +35,8 @@ h2 {
 .gridx2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 50px;
+  gap: 20px;
 }
 
 .gridx4 {
@@ -95,7 +100,14 @@ footer .fa-brands {
   font-size: 22px;
 }
 
+.gridx2 img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+}
+
 @media (max-width: 900px) {
+  .gridx2,
   .gridx3,
   .gridx4 {
     grid-template-columns: 1fr;
