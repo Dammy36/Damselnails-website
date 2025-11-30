@@ -32,23 +32,22 @@ h2 {
   color: #f50581;
 }
 
-.gridx2 {
+.gridx2,
+.gridx3,
+.gridx4 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   padding: 50px;
-  gap: 20px;
+}
+.gridx2 {
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+.gridx3 {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .gridx4 {
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 5px 50px;
-}
-
-.gridx3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 5px 50px;
 }
 
 .card {
@@ -106,17 +105,32 @@ footer .fa-brands {
   object-fit: cover;
 }
 
+.bridal-nails {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 @media (max-width: 900px) {
-  .gridx2,
   .gridx3,
   .gridx4 {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+  .gridx2 {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
   .black {
     margin: 0 auto;
     display: block;
     width: 100px;
     margin-top: 20px;
+  }
+
+  .gridx2 .container {
+    padding: 0;
+    gap: 5px;
   }
 }
