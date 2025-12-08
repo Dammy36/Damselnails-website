@@ -91,12 +91,106 @@ h2 {
   border-radius: 50%;
 }
 
+form label {
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background: #fafafa;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #f472b6; /* nude tone */
+}
+
+form label,
+form input,
+form textarea,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+form button {
+  padding: 14px;
+  background: #f472b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: #e4519d;
+}
+
+.contact-info {
+  max-width: 600px;
+  background: #fff;
+  margin: 20px auto 50px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info h3,
+.contact-info h4 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.contact-info hr {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background: #eee;
+}
+
 footer {
   background: rgb(15, 22, 41);
 }
 
 footer .fa-brands {
   font-size: 22px;
+}
+
+.map-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.map-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.map {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.map-container {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .gridx2 img {
@@ -132,5 +226,18 @@ footer .fa-brands {
   .gridx2 .container {
     padding: 0;
     gap: 5px;
+  }
+  .contact-info h3,
+  .contact-info h4,
+  .contact-info p {
+    text-align: center;
+  }
+
+  .map-section {
+    padding: 20px 20px;
+  }
+
+  .icon-container a .fa-brands {
+    margin-top: 10px;
   }
 }
