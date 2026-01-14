@@ -14,11 +14,11 @@ html {
 
 header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/184/original/damselnail-1.jpg?1761323107);
-  background-position: 30%;
+    url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/300/original/c3b8485b-4fdb-448a-8529-0b36d0cc3889.jpg?1764604986);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 1rem;
+
   height: 100vh;
   font-family: "Playfair Display", serif;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
