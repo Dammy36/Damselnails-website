@@ -13,9 +13,10 @@ html {
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/300/original/c3b8485b-4fdb-448a-8529-0b36d0cc3889.jpg?1764604986);
-  background-position: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/291/original/damselnail-1.jpg?1764602305);
+  background-position: 30%;
   background-size: cover;
   background-repeat: no-repeat;
 
