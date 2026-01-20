@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PinGrowth Digital</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Reveal animation base */
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 800ms ease, transform 800ms ease;
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Variants */
+      .reveal-left {
+        transform: translateX(-18px);
+      }
+      .reveal-right {
+        transform: translateX(18px);
+      }
+      .reveal-left.show,
+      .reveal-right.show {
+        transform: translateX(0);
+      }
+
+      /* Subtle floating animation for hero mock */
+      @keyframes floaty {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .floaty {
+        animation: floaty 4s ease-in-out infinite;
+      }
+
+      /* Button hover pop */
+      .pop:hover {
+        transform: translateY(-2px);
+      }
+      .pop {
+        transition: transform 250ms ease;
+      }
+    </style>
+
+    <script>
+      // Scroll-reveal animation
+      document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(".reveal");
+
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) entry.target.classList.add("show");
+            });
+          },
+          { threshold: 0.12 }
+        );
+
+        items.forEach((el) => io.observe(el));
+      });
+    </script>
+  </head>
+
+  <body class="bg-pink-100 text-white">
+    <!-- HEADER / NAV -->
+    <header
+      class="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-white/10"
+    >
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4"
+      >
+        <a href="#" class="text-lg font-extrabold tracking-wide">
+          <span class="text-white">PinGrowth</span
+          ><span class="text-pink-400">Digital</span>
+        </a>
+
+        <nav
+          class="hidden gap-6 text-xs font-semibold tracking-[0.25em] text-gray-200 md:flex"
+        >
+          <a href="#about" class="hover:text-pink-300">ABOUT</a>
+          <a href="#services" class="hover:text-pink-300">SERVICES</a>
+          <a href="#pricing" class="hover:text-pink-300">PRICING</a>
+          <a href="#testimonial" class="hover:text-pink-300">TESTIMONIAL</a>
+          <a href="#contact" class="hover:text-pink-300">CONTACT</a>
+        </nav>
+
+        <a
+          href="#contact"
+          class="rounded-full bg-pink-500 px-4 py-2 text-sm font-bold hover:bg-pink-600 pop"
+        >
+          GET STARTED
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-black">
+      <div
+        class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 md:grid-cols-2 md:py-16"
+      >
+        <!-- Left visuals (phone + your hero image) -->
+        <div class="relative mx-auto w-full max-w-md reveal reveal-left">
+          <!-- Phone mock -->
+          <div
+            class="absolute left-6 top-10 floaty h-60 w-40 -rotate-12 rounded-[2rem] border border-white/20 bg-zinc-900 shadow-2xl md:h-72 md:w-48"
+          >
+            <div class="mx-auto mt-4 h-4 w-16 rounded-full bg-white/10"></div>
+            <div
+              class="mx-auto mt-4 h-44 w-32 rounded-2xl bg-white/5 md:h-52 md:w-40"
+            ></div>
+          </div>
+
+          <!-- Main image card (YOUR image) -->
+          <div
+            class="relative ml-16 overflow-hidden rounded-3xl border border-white/15 bg-zinc-900 shadow-2xl"
+          >
+            <img
+              src="images/dami-imag3.jpg"
+              alt="PinGrowth Digital Hero"
+              class="h-[380px] w-full object-cover md:h-[440px]"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"
+            ></div>
+
+            <!-- Soft label like premium template -->
+            <div
+              class="absolute bottom-5 left-5 rounded-full bg-pink-500/90 px-4 py-2 text-xs font-bold tracking-wide"
+            >
+              PIN GROWTH DIGITAL
+            </div>
+          </div>
+        </div>
+
+        <!-- Right copy -->
+        <div class="text-center md:text-left reveal reveal-right">
+          <p class="text-xs font-semibold tracking-[0.35em] text-gray-300">
+            STRATEGIC
+          </p>
+
+          <h1
+            class="mt-3 text-4xl font-extrabold leading-tight text-pink-200 md:text-5xl"
+          >
+            SOCIAL MEDIA<br />
+            MANAGEMENT
+          </h1>
+
+          <p class="mt-5 max-w-xl text-base text-gray-200">
+            Grow on Instagram, TikTok, and Pinterest with clear strategies,
+            content ideas, and simple systems that help you get followers and
+            engagement without burnout.
+          </p>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a
+              href="#services"
+              class="inline-flex items-center justify-center rounded-md bg-pink-500 px-8 py-3 text-sm font-bold tracking-wide text-white shadow-lg hover:bg-pink-600 pop"
+            >
+              GET STARTED
+            </a>
+
+            <a
+              href="#pricing"
+              class="inline-flex items-center justify-center rounded-md border border-white/30 px-8 py-3 text-sm font-bold tracking-wide text-white hover:border-pink-300 hover:text-pink-200 pop"
+            >
+              SEE PACKAGES
+            </a>
+          </div>
+
+          <!-- Mini trust line -->
+          <p class="mt-6 text-sm text-gray-300">
+            Beginner-friendly. Results-focused. Designed for real growth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ICON ROW (pink strip) -->
+    <section class="bg-pink-200 text-black">
+      <div class="mx-auto max-w-6xl px-5 py-8">
+        <div class="grid grid-cols-3 gap-5 md:grid-cols-6 reveal">
+          <!-- Simple icons (you can replace with SVGs later) -->
+          <a href="#about" class="group text-center">
+            <div
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-black text-white shadow-md group-hover:bg-zinc-800"
+            >
+              i
+            </div>
+            <p class="mt-2 text-xs font-semibold tracking-wide">ABOUT</p>
+          </a>
+
+          <a href="#services" class="group text-center">
+            <div
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-black text-white shadow-md group-hover:bg-zinc-800"
+            >
+              ★
+            </div>
+            <p class="mt-2 text-xs font-semibold tracking-wide">SERVICES</p>
+          </a>
+
+          <a href="#pricing" class="group text-center">
+            <div
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-black text-white shadow-md group-hover:bg-zinc-800"
+            >
+              $
+            </div>
+            <p class="mt-2 text-xs font-semibold tracking-wide">PRICING</p>
+          </a>
+
+          <a href="#testimonial" class="group text-center">
+            <div
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-black text-white shadow-md group-hover:bg-zinc-800"
+            >
+              ✦
+            </div>
+            <p class="mt-2 text-xs font-semibold tracking-wide">SOCIAL</p>
+          </a>
+
+          <a href="#contact" class="group text-center">
+            <div
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-black text-white shadow-md group-hover:bg-zinc-800"
+            >
+              ✉
+            </div>
+            <p class="mt-2 text-xs font-semibold tracking-wide">CONTACT</p>
+          </a>
+
+          <a href="#services" class="group text-center">
+            <div
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-black text-white shadow-md group-hover:bg-zinc-800"
+            >
+              ✓
+            </div>
+            <p class="mt-2 text-xs font-semibold tracking-wide">START</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (white card on pink) -->
+    <section id="about" class="bg-pink-100 text-black">
+      <div class="mx-auto max-w-6xl px-5 py-16">
+        <div
+          class="mx-auto max-w-4xl rounded-3xl border border-black/10 bg-white/80 p-8 shadow-xl md:p-10 reveal"
+        >
+          <div class="text-center">
+            <h2 class="text-3xl font-extrabold tracking-wide">ABOUT US</h2>
+            <p
+              class="mt-2 text-xs font-semibold tracking-[0.25em] text-black/60"
+            >
+              YOUR PARTNER IN SOCIAL MEDIA SUCCESS
+            </p>
+          </div>
+
+          <p
+            class="mx-auto mt-6 max-w-2xl text-center text-sm leading-relaxed text-black/70"
+          >
+            PinGrowth Digital helps beginners and small brands grow their online
+            presence through strategic social media, content planning, and
+            simple growth systems that work across Instagram, TikTok, and
+            Pinterest.
+          </p>
+
+          <!-- Meet the manager -->
+          <div
+            class="mt-10 grid gap-6 md:grid-cols-[160px_1fr] md:items-center"
+          >
+            <div
+              class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-pink-300 shadow-md reveal reveal-left"
+            >
+              <img
+                src="images/dami-image2.jpg"
+                alt="Meet the Manager"
+                class="h-full w-full object-cover"
+              />
+            </div>
+
+            <div class="text-center md:text-left reveal reveal-right">
+              <p
+                class="inline-block rounded-full bg-pink-200 px-4 py-1 text-xs font-bold tracking-wide"
+              >
+                MEET THE MANAGER
+              </p>
+
+              <h3 class="mt-3 text-xl font-extrabold tracking-wide">DAMMY</h3>
+              <p class="mt-2 text-sm text-black/70">
+                I help you grow with clear strategies, better content ideas, and
+                step-by-step tips that make posting feel easy. If you’ve been
+                stuck, overwhelmed, or inconsistent — you’re in the right place.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES (black strip) -->
+    <section id="services" class="bg-black">
+      <div class="mx-auto max-w-6xl px-5 py-16">
+        <div class="text-center reveal">
+          <h2 class="text-4xl font-extrabold tracking-wide text-pink-200">
+            SERVICES LIST
+          </h2>
+          <p class="mt-2 text-xs font-semibold tracking-[0.25em] text-gray-300">
+            SOLUTIONS FOR EVERY BRAND
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <div class="rounded-xl bg-zinc-900 p-6 shadow-lg reveal reveal-left">
+            <p class="font-bold text-pink-200">Social Media Strategy</p>
+            <p class="mt-2 text-sm text-gray-300">
+              A clear plan for what to post and how to grow.
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-zinc-900 p-6 shadow-lg reveal">
+            <p class="font-bold text-pink-200">Content Creation</p>
+            <p class="mt-2 text-sm text-gray-300">
+              Hooks, captions, ideas, and content direction.
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-zinc-900 p-6 shadow-lg reveal reveal-right">
+            <p class="font-bold text-pink-200">Account Optimization</p>
+            <p class="mt-2 text-sm text-gray-300">
+              Bio, highlights, SEO, profile tweaks that convert.
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-zinc-900 p-6 shadow-lg reveal reveal-left">
+            <p class="font-bold text-pink-200">Pinterest Marketing</p>
+            <p class="mt-2 text-sm text-gray-300">
+              Pin SEO + strategy to drive traffic consistently.
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-zinc-900 p-6 shadow-lg reveal">
+            <p class="font-bold text-pink-200">Analytics and Reporting</p>
+            <p class="mt-2 text-sm text-gray-300">
+              Know what’s working and what to do next.
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-zinc-900 p-6 shadow-lg reveal reveal-right">
+            <p class="font-bold text-pink-200">Growth Coaching</p>
+            <p class="mt-2 text-sm text-gray-300">
+              Simple guidance to stay consistent and improve fast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING (pink section with 3 black cards) -->
+    <section id="pricing" class="bg-pink-100 text-black">
+      <div class="mx-auto max-w-6xl px-5 py-16">
+        <div class="text-center reveal">
+          <h2 class="text-4xl font-extrabold tracking-wide">PRICING</h2>
+          <p class="mt-2 text-sm text-black/70">
+            Simple packages you can start with today
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <div
+            class="rounded-2xl border border-black/10 bg-black p-8 text-white shadow-xl reveal reveal-left"
+          >
+            <p class="text-xs font-semibold tracking-[0.25em] text-gray-300">
+              STARTER PACKAGE
+            </p>
+            <p class="mt-5 text-5xl font-extrabold text-pink-300">$100</p>
+            <ul class="mt-6 space-y-2 text-sm text-gray-200">
+              <li>✓ Growth audit</li>
+              <li>✓ Content direction</li>
+              <li>✓ 7-day action plan</li>
+            </ul>
+            <a
+              href="#contact"
+              class="mt-8 block rounded-full bg-pink-500 px-6 py-3 text-center font-bold hover:bg-pink-600 pop"
+            >
+              BOOK NOW
+            </a>
+          </div>
+
+          <div
+            class="rounded-2xl border border-black/10 bg-black p-8 text-white shadow-xl reveal"
+          >
+            <p class="text-xs font-semibold tracking-[0.25em] text-gray-300">
+              GROWTH PACKAGE
+            </p>
+            <p class="mt-5 text-5xl font-extrabold text-pink-300">$250</p>
+            <ul class="mt-6 space-y-2 text-sm text-gray-200">
+              <li>✓ Strategy session</li>
+              <li>✓ Content planner</li>
+              <li>✓ 30-day growth plan</li>
+            </ul>
+            <a
+              href="#contact"
+              class="mt-8 block rounded-full bg-pink-500 px-6 py-3 text-center font-bold hover:bg-pink-600 pop"
+            >
+              BOOK NOW
+            </a>
+          </div>
+
+          <div
+            class="rounded-2xl border border-black/10 bg-black p-8 text-white shadow-xl reveal reveal-right"
+          >
+            <p class="text-xs font-semibold tracking-[0.25em] text-gray-300">
+              PREMIUM PACKAGE
+            </p>
+            <p class="mt-5 text-5xl font-extrabold text-pink-300">$350</p>
+            <ul class="mt-6 space-y-2 text-sm text-gray-200">
+              <li>✓ Full optimization</li>
+              <li>✓ Content strategy</li>
+              <li>✓ Weekly check-ins</li>
+            </ul>
+            <a
+              href="#contact"
+              class="mt-8 block rounded-full bg-pink-500 px-6 py-3 text-center font-bold hover:bg-pink-600 pop"
+            >
+              BOOK NOW
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL (uses your 3rd image) -->
+    <section id="testimonial" class="bg-black">
+      <div class="mx-auto max-w-6xl px-5 py-16">
+        <div class="grid gap-10 md:grid-cols-2 md:items-center">
+          <div class="reveal reveal-left">
+            <h2 class="text-4xl font-extrabold text-pink-200">
+              Real Growth Feels Different
+            </h2>
+            <p class="mt-4 text-gray-300">
+              No stress. No guessing. Just a clear plan and content that
+              connects. If you’re ready to stop being inconsistent and start
+              growing, let’s do this together.
+            </p>
+
+            <div
+              class="mt-7 rounded-2xl border border-white/10 bg-zinc-900 p-6"
+            >
+              <p class="text-sm text-gray-200">
+                “I finally understood what to post and how to keep going. My
+                engagement improved and I felt confident again.”
+              </p>
+              <p class="mt-3 text-xs font-bold tracking-[0.25em] text-pink-200">
+                PIN GROWTH CLIENT
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal reveal-right">
+            <div
+              class="overflow-hidden rounded-3xl border border-white/10 shadow-2xl"
+            >
+              <img
+                src="images/dammy-image2.jpg"
+                alt="PinGrowth Digital"
+                class="h-[420px] w-full object-cover md:h-[520px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-pink-200 text-black">
+      <div class="mx-auto max-w-6xl px-5 py-16 text-center reveal">
+        <h2 class="text-4xl font-extrabold">Share Your Vision</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-sm text-black/70">
+          Tell me your goals and I’ll help you map out the next steps to grow
+          your social media with clarity and consistency.
+        </p>
+
+        <div
+          class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row"
+        >
+          <a
+            href="mailto:hello@pingrowthdigital.com"
+            class="rounded-full bg-black px-8 py-3 text-sm font-bold tracking-wide text-white hover:bg-zinc-900 pop"
+          >
+            EMAIL ME
+          </a>
+
+          <a
+            href="#pricing"
+            class="rounded-full border border-black/30 px-8 py-3 text-sm font-bold tracking-wide hover:border-black/60 pop"
+          >
+            VIEW PACKAGES
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black">
+      <div class="mx-auto max-w-6xl px-5 py-10">
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="reveal reveal-left">
+            <p class="text-lg font-extrabold">
+              <span class="text-white">PinGrowth</span
+              ><span class="text-pink-400">Digital</span>
+            </p>
+            <p class="mt-3 text-sm text-gray-300">
+              Social media growth tips for beginners and small brands. Strategy,
+              content, and consistency — made simple.
+            </p>
+          </div>
+
+          <div class="reveal">
+            <p class="text-sm font-bold tracking-[0.25em] text-gray-200">
+              QUICK LINKS
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-gray-300">
+              <li><a class="hover:text-pink-300" href="#about">About</a></li>
+              <li>
+                <a class="hover:text-pink-300" href="#services">Services</a>
+              </li>
+              <li>
+                <a class="hover:text-pink-300" href="#pricing">Pricing</a>
+              </li>
+              <li>
+                <a class="hover:text-pink-300" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="reveal reveal-right">
+            <p class="text-sm font-bold tracking-[0.25em] text-gray-200">
+              CONTACT
+            </p>
+            <p class="mt-4 text-sm text-gray-300">
+              Email: hello@pingrowthdigital.com
+            </p>
+            <p class="mt-2 text-sm text-gray-300">Location: Online</p>
+
+            <div class="mt-5 flex gap-3">
+              <a
+                href="#"
+                class="rounded-full bg-zinc-900 px-4 py-2 text-xs font-bold text-gray-200 hover:text-pink-200"
+                >Pinterest</a
+              >
+              <a
+                href="#"
+                class="rounded-full bg-zinc-900 px-4 py-2 text-xs font-bold text-gray-200 hover:text-pink-200"
+                >Instagram</a
+              >
+              <a
+                href="#"
+                class="rounded-full bg-zinc-900 px-4 py-2 text-xs font-bold text-gray-200 hover:text-pink-200"
+                >TikTok</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-gray-400"
+        >
+          © <span id="year"></span> PinGrowth Digital. All rights reserved.
+        </div>
+      </div>
+
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>
