@@ -1,14 +1,56 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Chat widget fixes — AFTER Tailwind -->
+    <style>
+      .nails-msg {
+        text-align: left !important;
+        margin: 0 !important;
+      }
+      .nails-msg.bot {
+        text-align: left !important;
+        margin: 0 !important;
+      }
+      #nails-chat-messages {
+        text-align: left !important;
+        align-items: flex-start !important;
+      }
+      #nails-chat-input-row {
+        padding: 10px 12px !important;
+        margin: 0 !important;
+      }
+      #nails-chat-input {
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+        width: auto !important;
+      }
+      #nails-chat-send {
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+        width: auto !important;
+        display: flex !important;
+      }
+
+      @media (max-width: 480px) {
+        #nails-chat-window.open ~ #nails-chat-bubble,
+        #nails-chat-bubble.hidden {
+          display: none !important;
+        }
+      }
+    </style>
     <link rel="stylesheet" href="Css/damsel.css" />
     <link rel="stylesheet" href="Css/normalize.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
+    <meta name="p:domain_verify" content="780bb2ac6f284ebc101d034f84038e30" />
 
     <link
       rel="stylesheet"
@@ -28,9 +70,48 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <title>Damsel Nails</title>
   </head>
   <body>
+    <button id="nails-chat-bubble" aria-label="Open chat">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M12 2C6.48 2 2 6.04 2 11c0 2.61 1.34 4.94 3.5 6.55V22l3.93-2.16c.83.16 1.69.25 2.57.25 5.52 0 10-4.04 10-9.09S17.52 2 12 2z"
+        />
+      </svg>
+    </button>
+
+    <div id="nails-chat-window">
+      <div id="nails-chat-header">
+        <div id="nails-chat-header-text">
+          <span id="nails-chat-header-title">Damsel Nails Assistant 💅</span>
+          <span id="nails-chat-header-subtitle"
+            >Services · Pricing · Bookings</span
+          >
+        </div>
+        <button id="nails-chat-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="nails-chat-messages">
+        <div class="nails-msg bot">
+          Hi love 💕 I'm here to help with nail services
+        </div>
+      </div>
+      <div id="nails-chat-input-row">
+        <input
+          id="nails-chat-input"
+          type="text"
+          placeholder="Type your question..."
+          autocomplete="off"
+        />
+        <button id="nails-chat-send">Send</button>
+      </div>
+    </div>
+
     <header class="relative px-8">
       <nav class="px-3 py-4 flex items-center justify-between relative z-50">
         <div class="w-10 md:w-14 lg:w-20">
@@ -320,6 +401,7 @@ https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/origina
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="damsel.js"></script>
   </body>
 </html>
