@@ -38,6 +38,39 @@
     <title>Damsel Nails</title>
   </head>
   <body>
+    <button id="nails-chat-bubble" aria-label="Open chat">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M12 2C6.48 2 2 6.04 2 11c0 2.61 1.34 4.94 3.5 6.55V22l3.93-2.16c.83.16 1.69.25 2.57.25 5.52 0 10-4.04 10-9.09S17.52 2 12 2z"
+        />
+      </svg>
+    </button>
+
+    <div id="nails-chat-window">
+      <div id="nails-chat-header">
+        <div>
+          Damsel Nails Assistant
+          <span class="subtitle">Ask about services, pricing, or bookings</span>
+        </div>
+        <button id="nails-chat-close" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="nails-chat-messages">
+        <div class="nails-msg bot">
+          Hi! 💅 I'm here to help with nail services, pricing, or booking an
+          appointment at Damsel Nails Studio. What's on your mind?
+        </div>
+      </div>
+      <div id="nails-chat-input-row">
+        <input
+          id="nails-chat-input"
+          type="text"
+          placeholder="Type your question..."
+          autocomplete="off"
+        />
+        <button id="nails-chat-send">Send</button>
+      </div>
+    </div>
+
     <div>
       <header class="relative h-screen px-8">
         <nav class="px-3 py-4 flex items-center justify-between relative z-50">
