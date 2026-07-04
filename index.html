@@ -36,6 +36,13 @@
         width: auto !important;
         display: flex !important;
       }
+
+      @media (max-width: 480px) {
+        #nails-chat-window.open ~ #nails-chat-bubble,
+        #nails-chat-bubble.hidden {
+          display: none !important;
+        }
+      }
     </style>
     <link rel="stylesheet" href="Css/damsel.css" />
     <link rel="stylesheet" href="Css/normalize.css" />

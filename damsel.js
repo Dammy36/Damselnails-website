@@ -45,10 +45,17 @@ var swiper = new Swiper(".mySwiper", {
 
   bubble.addEventListener("click", function () {
     win.classList.toggle("open");
-    if (win.classList.contains("open")) input.focus();
+    if (win.classList.contains("open")) {
+      bubble.classList.add("hidden");
+      setTimeout(function () {
+        input.focus();
+      }, 100);
+    }
   });
   closeBtn.addEventListener("click", function () {
     win.classList.remove("open");
+    bubble.classList.remove("hidden");
+    input.blur();
   });
 
   function addMessage(text, sender) {
