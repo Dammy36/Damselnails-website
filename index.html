@@ -3,7 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Chat widget fixes — AFTER Tailwind -->
+    <style>
+      .nails-msg {
+        text-align: left !important;
+        margin: 0 !important;
+      }
+      .nails-msg.bot {
+        text-align: left !important;
+        margin: 0 !important;
+      }
+      #nails-chat-messages {
+        text-align: left !important;
+        align-items: flex-start !important;
+      }
+      #nails-chat-input-row {
+        padding: 10px 12px !important;
+        margin: 0 !important;
+      }
+      #nails-chat-input {
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+        width: auto !important;
+      }
+      #nails-chat-send {
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+        width: auto !important;
+        display: flex !important;
+      }
+    </style>
     <link rel="stylesheet" href="Css/damsel.css" />
     <link rel="stylesheet" href="Css/normalize.css" />
     <link
@@ -48,16 +81,17 @@
 
     <div id="nails-chat-window">
       <div id="nails-chat-header">
-        <div>
-          Damsel Nails Assistant
-          <span class="subtitle">Ask about services, pricing, or bookings</span>
+        <div id="nails-chat-header-text">
+          <span id="nails-chat-header-title">Damsel Nails Assistant 💅</span>
+          <span id="nails-chat-header-subtitle"
+            >Services · Pricing · Bookings</span
+          >
         </div>
         <button id="nails-chat-close" aria-label="Close chat">&times;</button>
       </div>
       <div id="nails-chat-messages">
         <div class="nails-msg bot">
-          Hi! 💅 I'm here to help with nail services, pricing, or booking an
-          appointment at Damsel Nails Studio. What's on your mind?
+          Hi love 💕 I'm here to help with nail services
         </div>
       </div>
       <div id="nails-chat-input-row">
