@@ -21,7 +21,7 @@ var swiper = new Swiper(".mySwiper", {
 (function () {
   // 👇 PASTE YOUR REAL N8N PRODUCTION WEBHOOK URL BELOW 👇
   var WEBHOOK_URL =
-    "https://dammie.app.n8n.cloud/webhook/de39827a-8a89-4cd3-8909-15df84dc0874";
+    "https://victoria-dammy.app.n8n.cloud/webhook/11db0b0f-b438-40d3-99fd-e46202fefe13";
 
   var bubble = document.getElementById("nails-chat-bubble");
   var win = document.getElementById("nails-chat-window");
@@ -83,15 +83,14 @@ var swiper = new Swiper(".mySwiper", {
       body: JSON.stringify({ message: text, sessionId: sessionId }),
     })
       .then(function (res) {
-        return res.text();
+        return res.json();
       })
       .then(function (reply) {
         typingDiv.remove();
-        addMessage(
-          reply || "Sorry, I didn't catch that. Could you try again?",
-          "bot",
-        );
+
+        addMessage(reply.message || "Sorry, I didn't catch that.", "bot");
       })
+
       .catch(function () {
         typingDiv.remove();
         addMessage(
