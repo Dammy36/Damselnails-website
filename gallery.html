@@ -4,50 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Nail Gallery | Damsel Nails Studio</title>
+    <meta
+      name="description"
+      content="Browse real nail art from Damsel Nails Studio — manicures, acrylics, BIAB, and signature designs from our Egbeda, Lagos studio."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nail Gallery | Damsel Nails Studio" />
+    <meta
+      property="og:description"
+      content="Real nail art from Damsel Nails Studio, Egbeda, Lagos."
+    />
+    <meta
+      property="og:image"
+      content="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/291/original/damselnail-1.jpg?1764602305"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Chat widget fixes — AFTER Tailwind -->
-    <style>
-      .nails-msg {
-        text-align: left !important;
-        margin: 0 !important;
-      }
-      .nails-msg.bot {
-        text-align: left !important;
-        margin: 0 !important;
-      }
-      #nails-chat-messages {
-        text-align: left !important;
-        align-items: flex-start !important;
-      }
-      #nails-chat-input-row {
-        padding: 10px 12px !important;
-        margin: 0 !important;
-      }
-      #nails-chat-input {
-        margin: 0 !important;
-        margin-bottom: 0 !important;
-        width: auto !important;
-      }
-      #nails-chat-send {
-        margin: 0 !important;
-        margin-bottom: 0 !important;
-        width: auto !important;
-        display: flex !important;
-      }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#111111",
+              paper: "#FFFFFF",
+              champagne: "#F1E7DC",
+              blush: "#E9D3CE",
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
 
-      @media (max-width: 480px) {
-        #nails-chat-window.open ~ #nails-chat-bubble,
-        #nails-chat-bubble.hidden {
-          display: none !important;
-        }
-      }
-    </style>
     <link rel="stylesheet" href="Css/damsel.css" />
     <link rel="stylesheet" href="Css/normalize.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <meta name="p:domain_verify" content="780bb2ac6f284ebc101d034f84038e30" />
@@ -55,27 +52,11 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-…"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
-    <title>Damsel Nails</title>
   </head>
   <body>
     <button id="nails-chat-bubble" aria-label="Open chat">
@@ -111,343 +92,204 @@
         <button id="nails-chat-send">Send</button>
       </div>
     </div>
-    <header class="relative px-8">
-      <nav class="px-3 py-4 flex items-center justify-between relative z-50">
-        <div class="w-10 md:w-14 lg:w-20">
+
+    <header class="page-header relative">
+      <nav class="px-6 md:px-10 py-5 flex items-center justify-between relative z-50 max-w-7xl mx-auto">
+        <div class="w-12 md:w-14">
           <a href="index.html">
             <img
-              class="h-19 md:h-12 w-auto rounded-full"
-              src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/original/Pink_Black_Beige_Minimalist_Modern_Personal_Brand_Nail_Salon_Logo_%281%29.png?1761320107"
-              alt="Damsel-logo"
+              class="h-12 w-auto rounded-full"
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/original/Pink_Black_Beige_Minimalist_Modern_Personal_Brand_Nail_Salon_Logo_%281%29.png?1761320107"
+              alt="Damsel Nails Studio logo"
             />
           </a>
         </div>
 
-        <div class="md:hidden">
-          <button id="menu-btn" class="focus:outline-none">
-            <svg
-              class="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <li>
-            <a
-              href="index.html"
-              class="text-white hover:text-pink-400 transition"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="about.html"
-              class="text-white hover:text-pink-400 transition"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="service.html"
-              class="text-white hover:text-pink-400 transition"
-              >Services</a
-            >
-          </li>
-          <li>
-            <a
-              href="gallery.html"
-              class="text-white hover:text-pink-400 transition"
-              >Gallery</a
-            >
-          </li>
-          <li>
-            <a
-              href="contact.html"
-              class="text-white hover:text-pink-400 transition"
-              >Contact</a
-            >
-          </li>
-
-          <li>
-            <a
-              href="privacy-policy.html"
-              class="text-white hover:text-pink-400 transition"
-              >Privacy Policy</a
-            >
-          </li>
+        <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-white">
+          <li><a href="index.html" class="hover:text-blush transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-blush transition">About</a></li>
+          <li><a href="service.html" class="hover:text-blush transition">Services</a></li>
+          <li><a href="gallery.html" class="hover:text-blush transition">Gallery</a></li>
+          <li><a href="index.html#pricing" class="hover:text-blush transition">Pricing</a></li>
+          <li><a href="index.html#reviews" class="hover:text-blush transition">Reviews</a></li>
+          <li><a href="contact.html" class="hover:text-blush transition">Contact</a></li>
         </ul>
 
-        <div class="hidden md:flex space-x-3">
+        <div class="hidden lg:block">
           <a
-            href="https://wa.me/1234567890?text=Hi%20Damsel%20Nails!"
+            href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%27d%20like%20to%20book%20an%20appointment."
             target="_blank"
-            class="bg-pink-400 text-white px-4 py-2 rounded-md hover:bg-pink-500 transition"
-            >WhatsApp</a
+            class="btn btn-primary bg-white text-ink border-white"
           >
-          <a
-            href="https://www.instagram.com/damsellnails/"
-            target="_blank"
-            class="bg-pink-100 text-pink-400 px-4 py-2 rounded-md hover:bg-pink-200 transition"
-            >Instagram</a
-          >
+            Book Appointment
+          </a>
         </div>
+
+        <button id="menu-btn" class="lg:hidden text-white focus:outline-none" aria-label="Open menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </nav>
 
-      <div
-        id="mobile-menu"
-        class="hidden absolute top-16 left-0 w-full bg-white text-black mt-10 flex flex-col items-center space-y-4 py-6 z-50"
-      >
+      <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-ink text-white flex flex-col items-center gap-6 py-10 z-50">
+        <a href="index.html" class="hover:text-blush transition">Home</a>
+        <a href="about.html" class="hover:text-blush transition">About</a>
+        <a href="service.html" class="hover:text-blush transition">Services</a>
+        <a href="gallery.html" class="hover:text-blush transition">Gallery</a>
+        <a href="index.html#pricing" class="hover:text-blush transition">Pricing</a>
+        <a href="index.html#reviews" class="hover:text-blush transition">Reviews</a>
+        <a href="contact.html" class="hover:text-blush transition">Contact</a>
         <a
-          href="index.html"
-          class="block hover:text-pink-200 transition underline"
-          >Home</a
-        >
-        <a
-          href="about.html"
-          class="block hover:text-pink-200 transition underline"
-          >About</a
-        >
-        <a
-          href="service.html"
-          class="block hover:text-pink-200 transition underline"
-          >Services</a
-        >
-        <a
-          href="gallery.html"
-          class="block hover:text-pink-200 transition underline"
-          >Gallery</a
-        >
-        <a
-          href="contact.html"
-          class="block hover:text-pink-200 transition underline"
-          >Contact</a
-        >
-        <a
-          href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%20want%20to%20book%20an%20appointment."
+          href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%27d%20like%20to%20book%20an%20appointment."
           target="_blank"
-          class="text-green-400 hover:text-pink-500 transition"
+          class="btn btn-primary bg-white text-ink border-white mt-2"
         >
-          WhatsApp
-        </a>
-
-        <a
-          href="https://www.instagram.com/damsellnails/"
-          target="_blank"
-          class="text-pink-400 hover:text-pink-500 transition"
-        >
-          Instagram
+          Book Appointment
         </a>
       </div>
 
-      <section class="flex justify-center items-center h-screen">
-        <h2
-          class="text-6xl font-bold leading-relaxed animate__animated animate__fadeInTopLeft"
-        >
-          Gallery
-        </h2>
-      </section>
+      <div class="flex flex-col justify-center items-center text-center text-white py-24 md:py-32 px-6">
+        <p class="eyebrow text-blush">Our Work</p>
+        <h1 class="font-serif text-4xl md:text-6xl mt-4">Gallery</h1>
+      </div>
     </header>
-    <section class="md:m-15 m-0">
-      <div class="gridx4 grid place-items-center gap-2">
-        <img
-          src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/284/original/223348_27da226af72d23538ab7a0dad91cbc6f-12_12_2023__14_55_11.jpg?1764598482"
-          alt="nails"
-          class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-        />
 
-        <img
-          src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/285/original/219548_d0e68be1ad1a68c392f0632b074f5f3b-12_12_2023__14_53_35.jpg?1764598546"
-          alt="nails"
-          class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-        />
-        <img
-          src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/286/original/58_ecf56677e33e166d3cf7d374ead1ea8d-12_12_2023__15_11_16.jpg?1764598611"
-          alt="nails"
-          class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-        />
-        <img
-          src="
-
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/291/original/damselnail-1.jpg?1764602305"
-          alt="nails"
-          class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-        />
-      </div>
-      <div class="mb-0">
-        <div class="gridx4 grid place-items-center gap-2">
-          <img
-            src="
-
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/292/original/damselnails-2.jpg?1764602467"
-            alt="nails"
-            class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-          />
-          <img
-            src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/293/original/c08a5917-feaa-4631-a80f-8856f4d5d83a.jpg?1764603071"
-            alt="nails"
-            class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-          />
-          <img
-            src="
-
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/295/original/b1055330-82db-4343-b731-aa1ad715b716.jpg?1764604266"
-            alt="nails"
-            class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-          />
-          <img
-            src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/294/original/6a9bbea2-35cb-43ef-9caa-1ce00e498ee8.jpg?1764604203"
-            alt="nails"
-            class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-          />
-        </div>
+    <section class="py-20 md:py-28 px-6" data-reveal>
+      <div class="max-w-2xl mx-auto text-center mb-14">
+        <p class="eyebrow">Editorial Portfolio</p>
+        <h2 class="font-serif text-3xl md:text-4xl mt-3">Real Sets, Real Clients</h2>
+        <p class="text-ink/60 mt-4">Click any image to view it larger.</p>
       </div>
 
-      <div class="mb-0">
-        <div class="gridx4 grid place-items-center gap-2">
-          <img
-            src="
-
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/296/original/9139bc90-47f1-4ac4-8196-26a41a6660e1.jpg?1764604855"
-            alt="nails"
-            class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-          />
-          <img
-            src="
-
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/297/original/9ffcd9e4-3b38-4742-bfe1-5e8c88357d3e.jpg?1764604891"
-            alt="nails"
-            class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-          />
-          <img
-            src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/299/original/5d42dac0-37dd-481e-8a38-736e3a92cd59.jpg?1764604943"
-            alt="nails"
-            class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-          />
-          <img
-            src="
-
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/300/original/c3b8485b-4fdb-448a-8529-0b36d0cc3889.jpg?1764604986"
-            alt="nails"
-            class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-          />
+      <div class="max-w-7xl mx-auto columns-2 md:columns-3 lg:columns-4 gap-4 [column-fill:balance]">
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/284/original/223348_27da226af72d23538ab7a0dad91cbc6f-12_12_2023__14_55_11.jpg?1764598482" alt="Damsel Nails Studio nail set" />
         </div>
-
-        <div class="mb-0">
-          <div class="gridx4 grid place-items-center gap-2">
-            <img
-              src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/305/original/desing-nails.jpg?1764605299
-"
-              alt="nails"
-              class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-            />
-            <img
-              src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/306/original/refill_nails.jpg?1764605552"
-              alt="nails"
-              class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-            />
-            <img
-              src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/308/original/nails7.jpg?1764605627"
-              alt="nails"
-              class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-            />
-            <img
-              src="
-
-
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/309/original/nails6.jpg?1764605689"
-              alt="nails"
-              class="w-full md:h-80 h-auto max-w-xs mx-auto md:max-w-[500px] object-cover rounded-lg"
-            />
-          </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/285/original/219548_d0e68be1ad1a68c392f0632b074f5f3b-12_12_2023__14_53_35.jpg?1764598546" alt="Damsel Nails Studio nail set" />
         </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/286/original/58_ecf56677e33e166d3cf7d374ead1ea8d-12_12_2023__15_11_16.jpg?1764598611" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/291/original/damselnail-1.jpg?1764602305" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/292/original/damselnails-2.jpg?1764602467" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/293/original/c08a5917-feaa-4631-a80f-8856f4d5d83a.jpg?1764603071" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/295/original/b1055330-82db-4343-b731-aa1ad715b716.jpg?1764604266" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/294/original/6a9bbea2-35cb-43ef-9caa-1ce00e498ee8.jpg?1764604203" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/296/original/9139bc90-47f1-4ac4-8196-26a41a6660e1.jpg?1764604855" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/297/original/9ffcd9e4-3b38-4742-bfe1-5e8c88357d3e.jpg?1764604891" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/299/original/5d42dac0-37dd-481e-8a38-736e3a92cd59.jpg?1764604943" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/300/original/c3b8485b-4fdb-448a-8529-0b36d0cc3889.jpg?1764604986" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/305/original/desing-nails.jpg?1764605299" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/306/original/refill_nails.jpg?1764605552" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/308/original/nails7.jpg?1764605627" alt="Damsel Nails Studio nail set" />
+        </div>
+        <div class="gallery-item mb-4 break-inside-avoid" data-lightbox>
+          <img loading="lazy" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/309/original/nails6.jpg?1764605689" alt="Damsel Nails Studio nail set" />
+        </div>
+      </div>
+
+      <div class="text-center mt-14">
+        <a
+          href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%27d%20like%20to%20book%20an%20appointment."
+          target="_blank"
+          class="btn btn-primary bg-ink text-white"
+        >
+          Book an Appointment
+        </a>
       </div>
     </section>
 
-    <footer class="mt-16 p-5 py-0">
-      <div class="gridx3 items-center text-white p-5 md:p-10">
+    <footer class="pt-16 pb-8 px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-white">
         <div>
           <a href="index.html">
             <img
-              class="w-10 md:w-30 md:h-12 md:w-auto rounded-full"
-              src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/original/Pink_Black_Beige_Minimalist_Modern_Personal_Brand_Nail_Salon_Logo_%281%29.png?1761320107"
-              alt="Damsel-logo"
+              class="w-12 rounded-full mb-4"
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/original/Pink_Black_Beige_Minimalist_Modern_Personal_Brand_Nail_Salon_Logo_%281%29.png?1761320107"
+              alt="Damsel Nails Studio logo"
             />
           </a>
-
-          <h4 class="mt-4 text-2xl font-bold leading-relaxed">Call Us</h4>
-          <p class="leading-relaxed">Phone : +2348034485794</p>
-
-          <h4 class="mt-4 text-2xl font-bold leading-relaxed">Find US</h4>
-          <p class="leading-relaxed">24 Akwonjo Road Egbeda Lagos</p>
+          <h4 class="font-serif text-lg mb-2">Damsel Nails Studio</h4>
+          <p class="text-white/60 text-sm leading-relaxed">Beautiful nails. Exceptional care.</p>
         </div>
 
         <div>
-          <h4 class="mt-4 text-2xl font-bold leading-relaxed">Our Menu</h4>
-          <p class="mt-2 leading-relaxed hover:underline hover:text-pink-500">
-            <a href="index.html">Home</a>
-          </p>
-          <p class="leading-relaxed hover:underline hover:text-pink-500">
-            <a href="about.html">About</a>
-          </p>
-          <p class="leading-relaxed hover:underline hover:text-pink-500">
-            <a href="gallery.html">Gallery</a>
-          </p>
-          <p class="leading-relaxed hover:underline hover:text-pink-500">
-            <a href="service.html">Service</a>
-          </p>
-          <p class="leading-relaxed hover:underline hover:text-pink-500">
-            <a href="contact.html">Contact</a>
-          </p>
+          <h4 class="font-serif text-lg mb-4">Explore</h4>
+          <div class="flex flex-col gap-2 text-sm text-white/70">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="about.html" class="hover:text-white">About</a>
+            <a href="gallery.html" class="hover:text-white">Gallery</a>
+            <a href="service.html" class="hover:text-white">Services</a>
+            <a href="contact.html" class="hover:text-white">Contact</a>
+          </div>
         </div>
 
-        <div class="mt-2 md:mt-0">
+        <div>
+          <h4 class="font-serif text-lg mb-4">Services</h4>
+          <div class="flex flex-col gap-2 text-sm text-white/70">
+            <a href="service.html" class="hover:text-white">Russian Manicure</a>
+            <a href="service.html" class="hover:text-white">Acrylic Nails</a>
+            <a href="service.html" class="hover:text-white">BIAB Nails</a>
+            <a href="service.html" class="hover:text-white">Bridal Nails</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-serif text-lg mb-4">Visit Us</h4>
+          <p class="text-white/70 text-sm leading-relaxed">24 Akowonjo Road, Egbeda, Lagos</p>
+          <p class="text-white/70 text-sm mt-2">+234 803 448 5794</p>
+          <div class="flex gap-4 mt-4 text-lg">
+            <a href="https://www.instagram.com/damsellnails/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@damsellnails" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://web.facebook.com/profile.php?id=100063575441972" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.pinterest.com/Damselnails/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
           <a
-            href="https://www.instagram.com/damsellnails/"
+            href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%27d%20like%20to%20book%20an%20appointment."
             target="_blank"
-            rel="noopener noreferrer"
-            class="p-5 text-3xl text-pink-500"
-            ><i class="fa-brands fa-instagram hover:text-white"></i
-          ></a>
-          <a
-            href="https://www.tiktok.com/@damsellnails"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-5 text-3xl text-pink-500"
-            ><i class="fa-brands fa-tiktok hover:text-white"></i
-          ></a>
-          <a
-            href="https://web.facebook.com/profile.php?id=100063575441972
-"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-5 text-3xl text-pink-500"
+            class="btn btn-outline inline-block mt-5 text-xs px-5 py-2.5"
           >
-            <i class="fa-brands fa-facebook hover:text-white"></i
-          ></a>
+            Book Appointment
+          </a>
         </div>
       </div>
+
+      <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-2 text-xs text-white/40">
+        <p>© 2026 Damsel Nails Studio. All rights reserved.</p>
+        <a href="privacy-policy.html" class="hover:text-white/70">Privacy Policy</a>
+      </div>
     </footer>
+
+    <div id="lightbox">
+      <button id="lightbox-close" aria-label="Close">&times;</button>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="damsel.js"></script>
   </body>

@@ -2,37 +2,31 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
+
 body {
-  background: #f1e7ed;
+  background: #ffffff;
+  color: #111111;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
-header {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/291/original/damselnail-1.jpg?1764602305);
-  background-position: 30%;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  height: 100vh;
+h1,
+h2,
+h3,
+.font-serif {
   font-family: "Playfair Display", serif;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 a {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-h2 {
-  color: #f50581;
-}
-
+/* ===== Layout grids (kept from the original site, restyled) ===== */
 .gridx2,
 .gridx3,
 .gridx4 {
@@ -40,205 +34,39 @@ h2 {
   padding: 50px;
 }
 .gridx2 {
-  gap: 10px;
+  gap: 32px;
   grid-template-columns: 1fr 1fr;
 }
 .gridx3 {
+  gap: 28px;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
 .gridx4 {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.card {
-  max-width: 90%;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-  border-radius: 10px;
-  padding: 15px;
   gap: 20px;
-}
-
-.slow-animataion {
-  animation-duration: 2s !important;
-}
-
-.card img {
-  width: 70%;
-  height: 50%;
-}
-
-.bg {
-  background-color: #50464d;
-}
-
-.fa-quote-right {
-  left: 30%;
-  bottom: 0;
-  font-size: 50px;
-}
-
-.black {
-  margin: 0 auto;
-  display: block;
-  width: 100px;
-}
-
-.black img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-form label {
-  font-weight: 500;
-}
-
-form input,
-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  background: #fafafa;
-}
-
-form input:focus,
-form textarea:focus {
-  outline: none;
-  border-color: #f472b6;
-}
-
-form label,
-form input,
-form textarea,
-form
-  button:not(#nails-chat-send):not(#nails-chat-close):not(#nails-chat-bubble) {
-  display: block;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-form button {
-  padding: 14px;
-  background: #f472b6;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-form button:hover {
-  background: #e4519d;
-}
-
-.contact-info {
-  max-width: 600px;
-  background: #fff;
-  margin: 20px auto 50px;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.contact-info h3,
-.contact-info h4 {
-  font-family: "Playfair Display", serif;
-  margin-bottom: 10px;
-}
-
-.contact-info p {
-  margin: 5px 0;
-  font-size: 15px;
-}
-
-.contact-info hr {
-  margin: 20px 0;
-  border: none;
-  height: 1px;
-  background: #eee;
-}
-
-footer {
-  background: rgb(15, 22, 41);
-}
-
-footer .fa-brands {
-  font-size: 22px;
-}
-
-.map-section {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.map-section h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.map {
-  width: 100%;
-  aspect-ratio: 16/9;
-}
-.map-container {
-  width: 100%;
-  margin: 0 auto;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.gridx2 img {
-  max-width: 80%;
-  max-height: 80%;
-  object-fit: cover;
-}
-
-.bridal-nails {
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 @media (max-width: 900px) {
   .gridx3,
   .gridx4 {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 20px;
   }
   .gridx2 {
     grid-template-columns: 1fr;
-    gap: 5px;
+    gap: 16px;
   }
-
-  .black {
-    margin: 0 auto;
-    display: block;
-    width: 100px;
-    margin-top: 20px;
-  }
-
   .gridx2 .container {
     padding: 0;
-    gap: 5px;
   }
   .contact-info h3,
   .contact-info h4,
   .contact-info p {
     text-align: center;
   }
-
   .map-section {
     padding: 20px;
   }
-
   .icon-container a .fa-brands {
     margin-top: 10px;
   }
@@ -247,8 +75,297 @@ footer .fa-brands {
   }
 }
 
+/* ===== Rotating "view gallery" badge on the home hero photo ===== */
+.gallery-badge {
+  position: absolute;
+  bottom: -28px;
+  left: -28px;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-badge-text {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: badge-spin 14s linear infinite;
+}
+.gallery-badge-arrow {
+  position: relative;
+  z-index: 1;
+  color: #e9d3ce;
+  font-size: 22px;
+}
+@keyframes badge-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-badge-text {
+    animation: none;
+  }
+}
+@media (max-width: 640px) {
+  .gallery-badge {
+    width: 84px;
+    height: 84px;
+    bottom: -18px;
+    left: -18px;
+  }
+}
+
+header.page-header {
+  background-color: #111111;
+}
+
+/* ===== Cards ===== */
+.card {
+  background-color: #fff;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 4px;
+  padding: 28px;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+.card:hover {
+  border-color: rgba(17, 17, 17, 0.25);
+  transform: translateY(-3px);
+}
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.bg {
+  background-color: #111111;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #111111;
+}
+.btn-primary:hover {
+  background: #ffffff;
+  color: #111111;
+}
+.btn-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+.btn-outline:hover {
+  background: #ffffff;
+  color: #111111;
+  border-color: #ffffff;
+}
+.btn-outline-dark {
+  background: transparent;
+  color: #111111;
+  border: 1px solid rgba(17, 17, 17, 0.3);
+}
+.btn-outline-dark:hover {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #a9846f;
+}
+
+/* ===== Testimonials ===== */
+.fa-quote-right {
+  font-size: 32px;
+  color: #d8b9ab;
+}
+
+.black {
+  margin: 0 auto;
+  display: block;
+  width: 84px;
+}
+.black img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet {
+  background: #111111 !important;
+  opacity: 0.25 !important;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+/* ===== Contact ===== */
+.contact-info {
+  max-width: 600px;
+  background: #f1e7dc;
+  margin: 20px auto 50px;
+  padding: 36px;
+  border-radius: 4px;
+}
+.contact-info h3,
+.contact-info h4 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+}
+.contact-info p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+.contact-info hr {
+  margin: 24px 0;
+  border: none;
+  height: 1px;
+  background: rgba(17, 17, 17, 0.12);
+}
+
+footer {
+  background: #111111;
+}
+footer .fa-brands {
+  font-size: 20px;
+}
+footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer a:hover {
+  color: #ffffff;
+}
+
+.map-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+.map-section h2 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.map {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.map-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.gridx2 img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.bridal-nails {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ===== Scroll reveal (replaces Animate.css) ===== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ===== Gallery + lightbox ===== */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+#lightbox.open {
+  display: flex;
+}
+#lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 2px;
+}
+#lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  color: #fff;
+  font-size: 34px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
 /* =====================
-   DAMSEL NAILS CHAT WIDGET
+   DAMSEL NAILS CHAT WIDGET (restyled to the new palette; ids/logic unchanged)
    ===================== */
 
 #nails-chat-bubble {
@@ -258,8 +375,8 @@ footer .fa-brands {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: rgb(236, 72, 153);
-  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.4);
+  background: #111111;
+  box-shadow: 0 4px 14px rgba(17, 17, 17, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,8 +406,8 @@ footer .fa-brands {
   width: 335px;
   max-height: 460px;
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 0 24px rgba(236, 72, 153, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 0 30px rgba(17, 17, 17, 0.25);
   display: none;
   flex-direction: column;
   overflow: hidden;
@@ -302,7 +419,6 @@ footer .fa-brands {
   display: flex;
 }
 
-/* Mobile: full screen */
 @media (max-width: 480px) {
   #nails-chat-window {
     bottom: 0;
@@ -320,7 +436,7 @@ footer .fa-brands {
 }
 
 #nails-chat-header {
-  background: rgb(236, 72, 153);
+  background: #111111;
   color: #fff;
   padding: 14px 16px;
   font-size: 15px;
@@ -348,7 +464,7 @@ footer .fa-brands {
 #nails-chat-header-subtitle {
   font-size: 12px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.75);
   margin-top: 2px;
   text-align: left;
   padding: 0;
@@ -378,7 +494,7 @@ footer .fa-brands {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  background: rgb(252, 231, 243);
+  background: #f1e7dc;
   text-align: left !important;
   -webkit-overflow-scrolling: touch;
 }
@@ -386,7 +502,7 @@ footer .fa-brands {
 .nails-msg {
   max-width: 82%;
   padding: 10px 14px;
-  border-radius: 16px;
+  border-radius: 10px;
   font-size: 14px;
   line-height: 1.5;
   white-space: pre-wrap;
@@ -399,9 +515,9 @@ footer .fa-brands {
 }
 .nails-msg.bot {
   background: #fff !important;
-  color: #5a4150 !important;
+  color: #2b2b2b !important;
   align-self: flex-start !important;
-  border: 1px solid rgba(236, 72, 153, 0.2) !important;
+  border: 1px solid rgba(17, 17, 17, 0.12) !important;
   text-align: left !important;
   margin: 0 !important;
   padding: 10px 14px !important;
@@ -409,7 +525,7 @@ footer .fa-brands {
   font-size: 16px;
 }
 .nails-msg.user {
-  background: rgb(236, 72, 153);
+  background: #111111;
   color: #fff;
   align-self: flex-end;
   text-align: left;
@@ -417,9 +533,9 @@ footer .fa-brands {
 }
 .nails-msg.typing {
   background: #fff;
-  color: #c98aaf;
+  color: #a9846f;
   align-self: flex-start;
-  border: 1px solid rgba(236, 72, 153, 0.2);
+  border: 1px solid rgba(17, 17, 17, 0.12);
   font-style: italic;
   text-align: left;
   margin-left: 0;
@@ -427,8 +543,7 @@ footer .fa-brands {
 
 #nails-chat-input-row {
   display: flex;
-  border-top: 1px solid rgba(236, 72, 153, 0.15);
-
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
   padding-bottom: env(safe-area-inset-bottom, 10px);
   gap: 8px;
   background: #fff;
@@ -439,7 +554,7 @@ footer .fa-brands {
 }
 #nails-chat-input {
   flex: 1;
-  border: 1px solid rgb(252, 231, 243);
+  border: 1px solid #f1e7dc;
   border-radius: 22px;
   padding: 10px 16px;
   font-size: 16px;
@@ -452,10 +567,10 @@ footer .fa-brands {
   margin: 0;
 }
 #nails-chat-input:focus {
-  border-color: rgb(236, 72, 153);
+  border-color: #111111;
 }
 #nails-chat-send {
-  background: rgb(236, 72, 153);
+  background: #111111;
   border: none;
   color: #fff;
   border-radius: 22px;
