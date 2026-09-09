@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Image Admin | Damsel Nails Studio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { ink: "#111111", paper: "#ffffff", champagne: "#e9dcc3", blush: "#f0d9d6" },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-champagne/30 text-ink min-h-screen">
+    <div class="max-w-5xl mx-auto px-6 py-10">
+      <h1 class="text-2xl font-semibold mb-8">Damsel Nails — Image Admin</h1>
+
+      <div id="config-warning" class="hidden bg-red-50 text-red-700 border border-red-200 rounded-lg p-4 mb-6 text-sm">
+        Supabase isn't configured yet — open <code>js/supabase-client.js</code> and paste in your
+        real project URL and anon key.
+      </div>
+
+      <!-- Login -->
+      <div id="login-view" class="max-w-sm">
+        <form id="login-form" class="flex flex-col gap-4 bg-white rounded-xl border border-ink/10 p-6">
+          <label class="flex flex-col gap-1">
+            <span class="text-sm font-medium">Email</span>
+            <input id="login-email" type="email" required class="border border-ink/15 rounded-lg px-3 py-2 text-sm" />
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-sm font-medium">Password</span>
+            <input id="login-password" type="password" required class="border border-ink/15 rounded-lg px-3 py-2 text-sm" />
+          </label>
+          <p id="login-error" class="hidden text-sm text-red-600"></p>
+          <button type="submit" class="bg-ink text-white rounded-lg py-2 text-sm font-semibold">Log In</button>
+        </form>
+      </div>
+
+      <!-- Main app -->
+      <div id="app-view" class="hidden">
+        <div class="flex items-center justify-between mb-8">
+          <p class="text-sm text-ink/60">Upload a new photo for any slot — it goes live on the site immediately.</p>
+          <button id="logout-btn" class="text-sm underline">Log Out</button>
+        </div>
+
+        <div id="slots-container"></div>
+
+        <div class="mt-12">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-semibold text-lg">Gallery</h2>
+            <label class="text-sm bg-ink text-white rounded-lg px-4 py-2 cursor-pointer">
+              + Add Photos
+              <input id="add-photos-input" type="file" accept="image/*" multiple class="hidden" />
+            </label>
+          </div>
+          <div id="gallery-admin-grid" class="grid gap-4 sm:grid-cols-3 lg:grid-cols-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="js/supabase-client.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

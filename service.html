@@ -35,7 +35,7 @@
             },
             fontFamily: {
               serif: ['"Playfair Display"', "serif"],
-              sans: ["Inter", "sans-serif"],
+              sans: ["Poppins", "sans-serif"],
             },
           },
         },
@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="Css/damsel.css" />
     <link rel="stylesheet" href="Css/normalize.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <meta name="p:domain_verify" content="780bb2ac6f284ebc101d034f84038e30" />
@@ -60,39 +60,6 @@
     />
   </head>
   <body>
-    <button id="nails-chat-bubble" aria-label="Open chat">
-      <svg viewBox="0 0 24 24">
-        <path
-          d="M12 2C6.48 2 2 6.04 2 11c0 2.61 1.34 4.94 3.5 6.55V22l3.93-2.16c.83.16 1.69.25 2.57.25 5.52 0 10-4.04 10-9.09S17.52 2 12 2z"
-        />
-      </svg>
-    </button>
-
-    <div id="nails-chat-window">
-      <div id="nails-chat-header">
-        <div id="nails-chat-header-text">
-          <span id="nails-chat-header-title">Damsel Nails Assistant 💅</span>
-          <span id="nails-chat-header-subtitle"
-            >Services · Pricing · Bookings</span
-          >
-        </div>
-        <button id="nails-chat-close" aria-label="Close chat">&times;</button>
-      </div>
-      <div id="nails-chat-messages">
-        <div class="nails-msg bot">
-          Hi love 💕 I'm here to help with nail services
-        </div>
-      </div>
-      <div id="nails-chat-input-row">
-        <input
-          id="nails-chat-input"
-          type="text"
-          placeholder="Type your question..."
-          autocomplete="off"
-        />
-        <button id="nails-chat-send">Send</button>
-      </div>
-    </div>
 
     <header class="page-header relative">
       <nav class="px-6 md:px-10 py-5 flex items-center justify-between relative z-50 max-w-7xl mx-auto">
@@ -100,6 +67,7 @@
           <a href="index.html">
             <img
               class="h-12 w-auto rounded-full"
+              data-img-key="logo"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/original/Pink_Black_Beige_Minimalist_Modern_Personal_Brand_Nail_Salon_Logo_%281%29.png?1761320107"
               alt="Damsel Nails Studio logo"
             />
@@ -166,6 +134,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="card">
             <img
+              data-img-key="service_home_manicure"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/247/original/manicure.jpg?1761417221"
               alt="Russian manicure"
             />
@@ -180,6 +149,7 @@
 
           <div class="card">
             <img
+              data-img-key="service_home_acrylic"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/217/original/manicure-local.jpg?1764320936"
               alt="Acrylic nails"
             />
@@ -194,6 +164,7 @@
 
           <div class="card">
             <img
+              data-img-key="service_home_biab"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/021/original/baib_nails.jpg?1763615525"
               alt="BIAB nails"
             />
@@ -208,6 +179,7 @@
 
           <div class="card">
             <img
+              data-img-key="service_page_pedicure"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/182/original/local-pedi.jpg?1764159615"
               alt="Pedicure"
             />
@@ -221,6 +193,7 @@
 
           <div class="card">
             <img
+              data-img-key="service_page_polygel"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/617/original/nails2.jpg?1759874319"
               alt="Poly gel nails"
             />
@@ -235,6 +208,7 @@
 
           <div class="card">
             <img
+              data-img-key="service_page_lashes"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/218/original/lashe.jpg?1764320999"
               alt="Lash extensions"
             />
@@ -247,6 +221,7 @@
 
           <div class="card">
             <img
+              data-img-key="service_page_piercing"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/219/original/perciein.jpg?1764321171"
               alt="Piercing"
             />
@@ -280,6 +255,7 @@
       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-14">
         <div>
           <img
+            data-img-key="bridal_image"
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/176/237/original/poly_gel.jpg?1764499937"
             alt="Bridal nail set"
             class="w-full h-auto max-w-sm mx-auto md:max-w-full object-cover rounded"
@@ -331,6 +307,7 @@
           <a href="index.html">
             <img
               class="w-12 rounded-full mb-4"
+              data-img-key="logo"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/original/Pink_Black_Beige_Minimalist_Modern_Personal_Brand_Nail_Salon_Logo_%281%29.png?1761320107"
               alt="Damsel Nails Studio logo"
             />
@@ -388,5 +365,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="damsel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="js/supabase-client.js"></script>
+    <script src="js/site-images.js"></script>
   </body>
 </html>
