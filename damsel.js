@@ -40,9 +40,7 @@ var swiper = new Swiper(".mySwiper", {
   });
 })();
 
-// Contact form -> n8n automation webhook, then pre-filled WhatsApp handoff
-// (contact.html only). The webhook is fire-and-forget: if it's slow, down,
-// or blocked by CORS, the visitor still gets handed off to WhatsApp.
+// Contact form -> n8n automation webhook (contact.html only).
 (function () {
   var WEBHOOK_URL =
     "https://nayae-automation.app.n8n.cloud/webhook/61b661f3-7ed9-43fd-afbb-b70a60b7f91c";
@@ -52,19 +50,6 @@ var swiper = new Swiper(".mySwiper", {
 
   var status = document.getElementById("contact-form-status");
   var submitBtn = form.querySelector('button[type="submit"]');
-
-  function openWhatsApp(name, phone, service, message) {
-    var lines = [
-      "Hi Damsel Nails! I'd like to book an appointment.",
-      "Name: " + name,
-      "Phone: " + phone,
-      "Service: " + service,
-    ];
-    if (message) lines.push("Message: " + message);
-
-    var url = "https://wa.me/2348034485794?text=" + encodeURIComponent(lines.join("\n"));
-    window.open(url, "_blank", "noopener,noreferrer");
-  }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -91,13 +76,18 @@ var swiper = new Swiper(".mySwiper", {
         submittedAt: new Date().toISOString(),
       }),
     })
+      .then(function (res) {
+        if (!res.ok) throw new Error("Webhook responded with status " + res.status);
+        if (status) status.textContent = "Message sent! We'll be in touch soon.";
+        form.reset();
+      })
       .catch(function () {
-        /* automation is best-effort — WhatsApp handoff still happens below */
+        if (status) {
+          status.textContent =
+            "Something went wrong sending your message. Please try again.";
+        }
       })
       .finally(function () {
-        if (status) status.textContent = "Opening WhatsApp…";
-        openWhatsApp(name, phone, service, message);
-        form.reset();
         if (submitBtn) submitBtn.disabled = false;
       });
   });
