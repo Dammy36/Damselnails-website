@@ -118,9 +118,18 @@
         </a>
       </div>
 
-      <div class="flex flex-col justify-center items-center text-center text-white py-24 md:py-32 px-6">
-        <p class="eyebrow text-blush">Get In Touch</p>
-        <h1 class="font-serif text-4xl md:text-6xl mt-4">Contact</h1>
+      <div class="page-hero relative z-0 overflow-hidden min-h-[340px] md:min-h-[420px]">
+        <img
+          data-img-key="hero"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/618/original/nail4.jpg?1759874332"
+          alt="Close-up of an elegant, polished nail set"
+          class="hero-bg-img absolute inset-0 w-full h-full object-cover -z-10"
+        />
+        <div class="page-hero-overlay pointer-events-none absolute inset-0"></div>
+        <div class="relative z-10 flex flex-col justify-center items-center text-center text-white py-24 md:py-32 px-6">
+          <p class="hero-eyebrow eyebrow text-blush">Get In Touch</p>
+          <h1 class="page-hero-title font-serif text-4xl md:text-6xl mt-4">Contact</h1>
+        </div>
       </div>
     </header>
 
@@ -142,26 +151,100 @@
           </a>
         </div>
 
-        <div class="contact-info">
-          <h3>Contact Information</h3>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <form id="contact-form" class="bg-white border border-ink/10 rounded p-8" novalidate>
+            <h3 class="font-serif text-2xl mb-1">Send a Message</h3>
+            <p class="text-sm text-ink/60 mb-6 leading-relaxed">
+              Fill this in and we'll open WhatsApp with your details ready
+              to send — no back-and-forth typing needed.
+            </p>
 
-          <p><strong>📞 Phone:</strong> +234 803 448 5794</p>
-          <p><strong><span class="emoji-none">📧</span> Email:</strong> oseyemidammy@gmail.com</p>
-          <p><strong>📍 Location:</strong> 24 Akowonjo Road, Egbeda, Lagos</p>
+            <div class="mb-5">
+              <label for="contact-name" class="contact-form-label">Name</label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                required
+                class="contact-form-field"
+                placeholder="Your full name"
+              />
+            </div>
 
-          <h4>Working Hours</h4>
-          <p>Mon–Sat: 9am – 6pm</p>
-          <p>Sunday: Closed</p>
+            <div class="mb-5">
+              <label for="contact-phone" class="contact-form-label">Phone / WhatsApp Number</label>
+              <input
+                id="contact-phone"
+                name="phone"
+                type="tel"
+                required
+                class="contact-form-field"
+                placeholder="e.g. 0803 448 5794"
+              />
+            </div>
 
-          <hr />
+            <div class="mb-5">
+              <label for="contact-email" class="contact-form-label">Email</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                required
+                class="contact-form-field"
+                placeholder="you@example.com"
+              />
+            </div>
 
-          <h4>Follow Me</h4>
-          <p class="icon-container">
-            <a href="https://www.instagram.com/damsellnails/" target="_blank" rel="noopener noreferrer" class="p-1 text-xl text-ink/60 hover:text-ink"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@damsellnails" target="_blank" rel="noopener noreferrer" class="p-5 text-xl text-ink/60 hover:text-ink"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://web.facebook.com/profile.php?id=100063575441972" target="_blank" rel="noopener noreferrer" class="p-5 text-xl text-ink/60 hover:text-ink"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.pinterest.com/Damselnails/" target="_blank" rel="noopener noreferrer" class="p-5 text-xl text-ink/60 hover:text-ink"><i class="fa-brands fa-pinterest"></i></a>
-          </p>
+            <div class="mb-5">
+              <label for="contact-service" class="contact-form-label">Preferred Service</label>
+              <select id="contact-service" name="service" required class="contact-form-field">
+                <option value="" disabled selected>Select a service</option>
+                <option value="Russian Manicure">Russian Manicure</option>
+                <option value="Acrylic Nails">Acrylic Nails</option>
+                <option value="BIAB Nails">BIAB Nails</option>
+                <option value="Bridal Nails">Bridal Nails</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="mb-6">
+              <label for="contact-message" class="contact-form-label">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="4"
+                class="contact-form-field"
+                placeholder="Preferred date, design ideas, or any questions"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary bg-ink text-white w-full sm:w-auto">
+              Send via WhatsApp
+            </button>
+            <p id="contact-form-status" class="text-xs text-ink/50 mt-3" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+
+            <p><strong>📞 Phone:</strong> +234 803 448 5794</p>
+            <p><strong><span class="emoji-none">📧</span> Email:</strong> oseyemidammy@gmail.com</p>
+            <p><strong>📍 Location:</strong> 24 Akowonjo Road, Egbeda, Lagos</p>
+
+            <h4>Working Hours</h4>
+            <p>Mon–Sat: 9am – 6pm</p>
+            <p>Sunday: Closed</p>
+
+            <hr />
+
+            <h4>Follow Me</h4>
+            <p class="icon-container">
+              <a href="https://www.instagram.com/damsellnails/" target="_blank" rel="noopener noreferrer" class="p-1 text-xl text-ink/60 hover:text-ink"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@damsellnails" target="_blank" rel="noopener noreferrer" class="p-5 text-xl text-ink/60 hover:text-ink"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="https://web.facebook.com/profile.php?id=100063575441972" target="_blank" rel="noopener noreferrer" class="p-5 text-xl text-ink/60 hover:text-ink"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.pinterest.com/Damselnails/" target="_blank" rel="noopener noreferrer" class="p-5 text-xl text-ink/60 hover:text-ink"><i class="fa-brands fa-pinterest"></i></a>
+            </p>
+          </div>
         </div>
 
         <section class="map-section">

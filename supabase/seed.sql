@@ -7,7 +7,7 @@ truncate table site_images, gallery_images;
 -- ─── site_images (fixed slots) ───────────────────────────────────────
 insert into site_images (key, url, alt) values
   ('logo', 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/182/original/Pink_Black_Beige_Minimalist_Modern_Personal_Brand_Nail_Salon_Logo_%281%29.png?1761320107', 'Damsel Nails Studio logo'),
-  ('hero', 'image/hero-nails.jpg', 'Yellow, blue, and brown striped stiletto nail art by Damsel Nails Studio'),
+  ('hero', 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/618/original/nail4.jpg?1759874332', 'Close-up of an elegant, polished nail set'),
 
   ('signature_1', 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/618/original/nail4.jpg?1759874332', 'Nail art 1'),
   ('signature_2', 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/619/original/nails5.jpg?1759874345', 'Nail art 2'),

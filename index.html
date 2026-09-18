@@ -156,76 +156,45 @@
         </a>
       </div>
 
-      <div class="relative z-0 flex flex-col justify-end min-h-[560px] sm:min-h-[620px] lg:min-h-[680px] overflow-hidden">
+      <div class="hero-shell relative z-0 flex items-center justify-center text-center min-h-[600px] sm:min-h-[680px] lg:min-h-[86vh] lg:max-h-[880px] overflow-hidden">
         <img
-          data-img-key="signature_1"
+          data-img-key="hero"
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/174/618/original/nail4.jpg?1759874332"
-          alt="Nail art 1"
-          class="absolute inset-0 w-full h-full object-cover -z-10"
+          alt="Close-up of an elegant, polished nail set"
+          class="hero-bg-img absolute inset-0 w-full h-full object-cover -z-10"
         />
-        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent"></div>
-        <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/70 via-transparent to-transparent"></div>
+        <div class="hero-overlay pointer-events-none absolute inset-0"></div>
 
-        <a
-          href="gallery.html"
-          class="gallery-badge"
-          aria-label="View our gallery"
-        >
-          <svg viewBox="0 0 100 100" class="gallery-badge-text">
-            <defs>
-              <path id="badgeCircle" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
-            </defs>
-            <text font-size="7.6" letter-spacing="2" fill="#ffffff">
-              <textPath href="#badgeCircle">VIEW OUR GALLERY &#8226; VIEW OUR GALLERY &#8226; </textPath>
-            </text>
-          </svg>
-          <span class="gallery-badge-arrow" aria-hidden="true">&#8599;</span>
-        </a>
-
-        <div class="hidden lg:flex flex-col items-center gap-3 absolute right-6 top-1/2 -translate-y-1/2 z-10">
-          <a href="https://www.instagram.com/damsellnails/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 flex items-center justify-center rounded-full bg-ink/40 text-white hover:bg-blush hover:text-ink transition"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.tiktok.com/@damsellnails" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="w-9 h-9 flex items-center justify-center rounded-full bg-ink/40 text-white hover:bg-blush hover:text-ink transition"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="https://www.pinterest.com/Damselnails/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="w-9 h-9 flex items-center justify-center rounded-full bg-ink/40 text-white hover:bg-blush hover:text-ink transition"><i class="fa-brands fa-pinterest"></i></a>
-          <span class="w-px h-10 bg-white/30"></span>
-          <span class="[writing-mode:vertical-rl] text-[10px] tracking-[0.3em] text-white/70">FOLLOW US</span>
-        </div>
-
-        <div class="relative z-10 pt-20 px-6 sm:px-10 lg:px-16 pb-10 sm:pb-14 lg:pb-16 text-white">
-          <p class="eyebrow text-blush tracking-[0.2em]">Beautiful Nails. Exceptional Care.</p>
-          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold uppercase mt-5 leading-[1.08]">
-            Beautiful Nails,
-            <span class="block italic font-normal normal-case text-blush">Exceptional Care.</span>
-          </h1>
-          <p class="mt-6 max-w-md text-white/80 leading-relaxed">
-            Damsel Nails Studio is your go-to destination for stunning nail
-            art, manicures, pedicures, and premium nail care in Egbeda,
-            Lagos — creativity, style, and professionalism in every set.
+        <div class="relative z-10 max-w-2xl mx-auto px-6 sm:px-10 py-24 lg:py-28 text-white">
+          <p class="hero-eyebrow eyebrow text-blush tracking-[0.3em]">
+            Egbeda, Lagos <span class="mx-2 text-blush/50">&bull;</span> Luxury Nail Studio
           </p>
-          <div class="flex flex-wrap gap-4 mt-8">
+
+          <h1 class="font-serif uppercase mt-6 leading-[1.05] text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            <span class="hero-title-line block font-semibold">Nails,</span>
+            <span class="hero-title-line block italic font-normal normal-case text-blush">Refined.</span>
+          </h1>
+
+          <p class="hero-sub mt-7 text-sm sm:text-base tracking-wide text-white/75 max-w-xs mx-auto">
+            Luxury nails, thoughtfully crafted.
+          </p>
+
+          <div class="hero-cta flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8 mt-10">
             <a
               href="https://wa.me/2348034485794?text=Hi%20Damsel%20Nails!%20I%27d%20like%20to%20book%20an%20appointment."
               target="_blank"
-              class="btn btn-primary bg-white text-ink border-white"
+              class="hero-btn"
             >
               Book an Appointment
             </a>
-            <a href="gallery.html" class="btn btn-outline">Explore Our Work</a>
+            <a href="gallery.html" class="hero-link">Explore our work</a>
           </div>
+        </div>
 
-          <div class="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/20">
-            <div class="flex flex-col items-center gap-2 w-28 text-center">
-              <i class="fa-regular fa-clock text-blush text-xl"></i>
-              <span class="text-xs text-white/80 leading-snug">7 Years Experience</span>
-            </div>
-            <div class="flex flex-col items-center gap-2 w-28 text-center">
-              <i class="fa-solid fa-shield-halved text-blush text-xl"></i>
-              <span class="text-xs text-white/80 leading-snug">Hygiene First</span>
-            </div>
-            <div class="flex flex-col items-center gap-2 w-28 text-center">
-              <i class="fa-brands fa-whatsapp text-blush text-xl"></i>
-              <span class="text-xs text-white/80 leading-snug">Easy WhatsApp Booking</span>
-            </div>
-          </div>
+        <div class="hero-social hidden sm:flex items-center gap-3 absolute right-6 bottom-6 sm:right-10 sm:bottom-10 z-10">
+          <a href="https://www.instagram.com/damsellnails/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hero-social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@damsellnails" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="hero-social-icon"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.pinterest.com/Damselnails/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="hero-social-icon"><i class="fa-brands fa-pinterest"></i></a>
         </div>
       </div>
     </header>
